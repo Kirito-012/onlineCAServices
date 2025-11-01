@@ -2,6 +2,7 @@
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Link from 'next/link'
+import {useEffect} from 'react'
 import {
 	Building2,
 	Target,
@@ -13,13 +14,61 @@ import {
 } from 'lucide-react'
 
 export default function About() {
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('animate-in')
+					}
+				})
+			},
+			{
+				threshold: 0.1,
+				rootMargin: '0px 0px -50px 0px',
+			}
+		)
+
+		const elements = document.querySelectorAll('.animate-on-scroll')
+		elements.forEach((el) => observer.observe(el))
+
+		return () => observer.disconnect()
+	}, [])
 	return (
 		<>
 			<Header />
 			<main className='min-h-screen bg-gray-50 pt-20 pb-16'>
+				<style jsx global>{`
+					.animate-on-scroll {
+						opacity: 0;
+						transform: translateY(30px);
+						transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+					}
+					.animate-on-scroll.animate-in {
+						opacity: 1;
+						transform: translateY(0);
+					}
+					.stagger-1 { transition-delay: 0.1s; }
+					.stagger-2 { transition-delay: 0.2s; }
+					.stagger-3 { transition-delay: 0.3s; }
+					.stagger-4 { transition-delay: 0.4s; }
+					.hero-fade {
+						animation: fadeInUp 0.8s ease-out forwards;
+					}
+					@keyframes fadeInUp {
+						from {
+							opacity: 0;
+							transform: translateY(20px);
+						}
+						to {
+							opacity: 1;
+							transform: translateY(0);
+						}
+					}
+				`}</style>
 				<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
 					{/* Hero Section */}
-					<div className='bg-linear-to-r from-teal-600 to-blue-700 rounded-xl p-8 sm:p-12 mb-12 text-white shadow-lg'>
+					<div className='bg-linear-to-r from-teal-600 to-blue-700 rounded-xl p-8 sm:p-12 mb-12 text-white shadow-lg hero-fade'>
 						<h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold mb-4'>
 							About Us
 						</h1>
@@ -32,7 +81,7 @@ export default function About() {
 					{/* Content Container */}
 					<div className='space-y-12'>
 						{/* Who We Are */}
-						<section className='bg-white rounded-xl shadow-md p-6 sm:p-10'>
+						<section className='bg-white rounded-xl shadow-md p-6 sm:p-10 animate-on-scroll'>
 							<div className='flex items-center gap-3 mb-6'>
 								<Building2
 									className='text-teal-600'
@@ -78,7 +127,7 @@ export default function About() {
 						{/* Mission & Vision */}
 						<div className='grid md:grid-cols-2 gap-6'>
 							{/* Mission */}
-							<section className='bg-white rounded-xl shadow-md p-6 sm:p-8'>
+							<section className='bg-white rounded-xl shadow-md p-6 sm:p-8 animate-on-scroll stagger-1'>
 								<div className='flex items-center gap-3 mb-6'>
 									<Target
 										className='text-teal-600'
@@ -143,7 +192,7 @@ export default function About() {
 							</section>
 
 							{/* Vision */}
-							<section className='bg-white rounded-xl shadow-md p-6 sm:p-8'>
+							<section className='bg-white rounded-xl shadow-md p-6 sm:p-8 animate-on-scroll stagger-2'>
 								<div className='flex items-center gap-3 mb-6'>
 									<Eye
 										className='text-teal-600'
@@ -163,7 +212,7 @@ export default function About() {
 						</div>
 
 						{/* How We Work */}
-						<section className='bg-white rounded-xl shadow-md p-6 sm:p-10'>
+						<section className='bg-white rounded-xl shadow-md p-6 sm:p-10 animate-on-scroll'>
 							<div className='flex items-center gap-3 mb-6'>
 								<Settings
 									className='text-teal-600'
@@ -179,7 +228,7 @@ export default function About() {
 							</p>
 							<div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-6'>
 								{/* Step 1 */}
-								<div className='bg-linear-to-br from-teal-50 to-blue-50 rounded-lg p-6 border-2 border-teal-100'>
+								<div className='bg-linear-to-br from-teal-50 to-blue-50 rounded-lg p-6 border-2 border-teal-100 hover:shadow-lg hover:scale-105 transition-all duration-300'>
 									<div className='bg-teal-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mb-4'>
 										1
 									</div>
@@ -193,7 +242,7 @@ export default function About() {
 								</div>
 
 								{/* Step 2 */}
-								<div className='bg-linear-to-br from-teal-50 to-blue-50 rounded-lg p-6 border-2 border-teal-100'>
+								<div className='bg-linear-to-br from-teal-50 to-blue-50 rounded-lg p-6 border-2 border-teal-100 hover:shadow-lg hover:scale-105 transition-all duration-300'>
 									<div className='bg-teal-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mb-4'>
 										2
 									</div>
@@ -207,7 +256,7 @@ export default function About() {
 								</div>
 
 								{/* Step 3 */}
-								<div className='bg-linear-to-br from-teal-50 to-blue-50 rounded-lg p-6 border-2 border-teal-100'>
+								<div className='bg-linear-to-br from-teal-50 to-blue-50 rounded-lg p-6 border-2 border-teal-100 hover:shadow-lg hover:scale-105 transition-all duration-300'>
 									<div className='bg-teal-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mb-4'>
 										3
 									</div>
@@ -221,7 +270,7 @@ export default function About() {
 								</div>
 
 								{/* Step 4 */}
-								<div className='bg-linear-to-br from-teal-50 to-blue-50 rounded-lg p-6 border-2 border-teal-100'>
+								<div className='bg-linear-to-br from-teal-50 to-blue-50 rounded-lg p-6 border-2 border-teal-100 hover:shadow-lg hover:scale-105 transition-all duration-300'>
 									<div className='bg-teal-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mb-4'>
 										4
 									</div>
@@ -242,7 +291,7 @@ export default function About() {
 						</section>
 
 						{/* Why Choose Us */}
-						<section className='bg-white rounded-xl shadow-md p-6 sm:p-10'>
+						<section className='bg-white rounded-xl shadow-md p-6 sm:p-10 animate-on-scroll'>
 							<h2 className='text-2xl sm:text-3xl font-bold text-gray-900 mb-8'>
 								Why Choose Online CA Services
 							</h2>
@@ -343,12 +392,12 @@ export default function About() {
 						</section>
 
 						{/* Core Values */}
-						<section className='bg-linear-to-br from-teal-600 to-blue-700 rounded-xl shadow-lg p-6 sm:p-10 text-white'>
+						<section className='bg-linear-to-br from-teal-600 to-blue-700 rounded-xl shadow-lg p-6 sm:p-10 text-white animate-on-scroll'>
 							<h2 className='text-2xl sm:text-3xl font-bold mb-8'>
 								Our Core Values
 							</h2>
 							<div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-6'>
-								<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>
+								<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all duration-300'>
 									<Shield
 										className='mb-3'
 										size={28}
@@ -359,7 +408,7 @@ export default function About() {
 									</p>
 								</div>
 
-								<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>
+								<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all duration-300'>
 									<CheckCircle
 										className='mb-3'
 										size={28}
@@ -372,7 +421,7 @@ export default function About() {
 									</p>
 								</div>
 
-								<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>
+								<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all duration-300'>
 									<Shield
 										className='mb-3'
 										size={28}
@@ -383,7 +432,7 @@ export default function About() {
 									</p>
 								</div>
 
-								<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>
+								<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all duration-300'>
 									<Eye
 										className='mb-3'
 										size={28}
@@ -394,7 +443,7 @@ export default function About() {
 									</p>
 								</div>
 
-								<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>
+								<div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all duration-300'>
 									<Settings
 										className='mb-3'
 										size={28}
@@ -408,7 +457,7 @@ export default function About() {
 						</section>
 
 						{/* Legal Status & Disclaimer */}
-						<section className='bg-amber-50 rounded-xl shadow-md p-6 sm:p-10 border-l-4 border-amber-500'>
+						<section className='bg-amber-50 rounded-xl shadow-md p-6 sm:p-10 border-l-4 border-amber-500 animate-on-scroll'>
 							<h2 className='text-2xl font-bold text-gray-900 mb-6'>
 								Legal Status & Disclaimer
 							</h2>
@@ -440,7 +489,7 @@ export default function About() {
 						</section>
 
 						{/* Get in Touch */}
-						<section className='bg-white rounded-xl shadow-md p-6 sm:p-10'>
+						<section className='bg-white rounded-xl shadow-md p-6 sm:p-10 animate-on-scroll'>
 							<div className='flex items-center gap-3 mb-6'>
 								<Mail
 									className='text-teal-600'

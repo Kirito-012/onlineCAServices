@@ -10,7 +10,7 @@ export default function Header() {
 	const pathname = usePathname()
 
 	return (
-		<header className='fixed top-0 left-0 w-full bg-white shadow-sm z-50 border-b border-gray-100'>
+		<header className='fixed top-0 left-0 w-full bg-white shadow-sm z-50'>
 			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center'>
 				<Link
 					href='/'
@@ -25,6 +25,13 @@ export default function Header() {
 				</Link>
 
 				<nav className='hidden md:flex space-x-8 text-base text-gray-700 font-medium'>
+					<Link
+						href='/'
+						className={`hover:text-teal-600 transition-colors duration-300 ease-linear ${
+							pathname === '/' ? 'text-teal-600 font-semibold' : ''
+						}`}>
+						Home
+					</Link>
 					<Link
 						href='/about'
 						className={`hover:text-teal-600 transition-colors duration-300 ease-linear ${
@@ -58,10 +65,10 @@ export default function Header() {
 						className={`hover:text-teal-600 transition-colors duration-300 ease-l ${
 							pathname === '/contact' ? 'text-teal-600 font-semibold' : ''
 						}`}>
-						Contact
+						Contact Us
 					</Link>
 				</nav>
-				<div className='hidden md:block'>
+				<div className='hidden text-white md:block'>
 					<Link
 						href='/contact'
 						className='bg-teal-600 text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-teal-700 transition-all duration-200 flex items-center gap-2 shadow-sm hover:shadow'>
@@ -80,6 +87,14 @@ export default function Header() {
 			{isOpen && (
 				<div className='md:hidden bg-white border-t border-gray-100 shadow-lg'>
 					<nav className='flex flex-col items-center py-6 space-y-4 text-gray-700 font-medium text-sm'>
+						<Link
+							href='/'
+							onClick={() => setIsOpen(false)}
+							className={`hover:text-teal-600 transition-colors ${
+								pathname === '/' ? 'text-teal-600 font-semibold' : ''
+							}`}>
+							Home
+						</Link>
 						<Link
 							href='/about'
 							onClick={() => setIsOpen(false)}
