@@ -65,7 +65,7 @@ export default function Footer() {
 						{/* Social Links */}
 						<div className='flex gap-3'>
 							<a
-								href='https://www.instagram.com/onlinecaservices.in/'
+								href='https://www.instagram.com/onlinecaservices'
 								aria-label='Instagram'
 								className='bg-white/5 p-2.5 rounded-lg hover:bg-teal-600 hover:scale-110 transition-all duration-300 border border-white/10'>
 								<FaInstagram size={16} />
@@ -108,7 +108,7 @@ export default function Footer() {
 									href='/blogs'
 									className='text-gray-400 hover:text-teal-400 transition-colors text-sm flex items-center gap-2 group'>
 									<span className='w-0 h-0.5 bg-teal-400 group-hover:w-4 transition-all duration-300'></span>
-									Blogs
+									Blogs/Knowledge Hub
 								</Link>
 							</li>
 							<li>
