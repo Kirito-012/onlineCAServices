@@ -58,9 +58,10 @@ export default function WhyChooseUs() {
     <section className="py-20 bg-gray-50 text-gray-800">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           className="mb-6"
         >
           <span className="px-4 py-1 text-sm rounded-full bg-blue-100 text-blue-800 font-semibold">
@@ -69,18 +70,20 @@ export default function WhyChooseUs() {
         </motion.div>
 
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
           className="text-3xl md:text-4xl text-teal-400 font-bold mb-4"
         >
-          India’s Most Trusted Online Chartered Accountants
+          India's Most Trusted Online Chartered Accountants
         </motion.h2>
 
         <motion.p
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.4, delay: 0.2 }}
           className="max-w-2xl mx-auto text-gray-600 mb-12"
         >
           Our team of experienced professionals is dedicated to providing you
@@ -94,9 +97,10 @@ export default function WhyChooseUs() {
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition"
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.4, delay: index * 0.05, ease: "easeOut" }}
+              className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
+              style={{ willChange: "transform, opacity" }}
             >
               <div className="flex justify-center mb-4">{feature.icon}</div>
               <h3 className="font-semibold text-lg mb-2">{feature.title}</h3>
@@ -107,10 +111,12 @@ export default function WhyChooseUs() {
 
         {/* Stats Section */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 bg-white shadow-md rounded-2xl p-8"
+          style={{ willChange: "transform, opacity" }}
         >
           {stats.map((stat, index) => (
             <div key={index} className="flex flex-col items-center">
