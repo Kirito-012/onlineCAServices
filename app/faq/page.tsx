@@ -124,7 +124,7 @@ export default function FAQ() {
 					}
 				`}</style>
 
-				<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+				<div className='max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 py-12'>
 					{/* Header Section */}
 					<div className='text-center mb-12 header-fade'>
 						<h1 className='text-4xl sm:text-5xl font-bold text-gray-900 mb-4'>

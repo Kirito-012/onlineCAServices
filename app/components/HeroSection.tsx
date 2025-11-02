@@ -11,7 +11,7 @@ export default function HeroSection() {
 	})
 
 	return (
-		<section className='relative text-white pt-24 pb-16 min-h-[calc(100vh-64px)] bg-linear-to-br from-teal-600 via-teal-700 to-blue-900'>
+		<section className='relative text-white flex items-center justify-center bg-linear-to-br from-teal-600 via-teal-700 to-blue-900'>
 			<style jsx>{`
 				@keyframes fadeInUp {
 					from {
@@ -87,10 +87,10 @@ export default function HeroSection() {
 			`}</style>
 			<div className='absolute inset-0 bg-linear-to-t from-black/20 to-transparent'></div>
 
-			<div className='relative max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 px-4 sm:px-6 lg:px-8 z-10'>
+			<div className='relative max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-10 px-6 sm:px-8 lg:px-12 z-10 py-12'>
 				{/* Left Content */}
-				<div className='lg:w-1/2 space-y-5 mt-8 lg:mt-20'>
-					<h1 className='text-3xl sm:text-4xl lg:text-[44px] font-bold leading-tight animate-fade-in-left'>
+				<div className='lg:w-1/2 space-y-5 text-center lg:text-left w-full'>
+					<h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-bold leading-tight animate-fade-in-left'>
 						<span className='text-white'>
 							Trusted & Expert Chartered Accountants for{' '}
 						</span>
@@ -99,13 +99,13 @@ export default function HeroSection() {
 						</span>
 					</h1>
 
-					<p className='text-gray-200 text-base sm:text-lg max-w-2xl leading-relaxed animate-fade-in-left delay-200'>
+					<p className='text-gray-200 text-sm sm:text-base md:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed animate-fade-in-left delay-200'>
 						Online CA Services Near Me - Simple, Secure & Affordable Chartered
 						Accountant Support Across India
 					</p>
 
 					{/* Feature Highlights */}
-					<div className='grid grid-cols-2 lg:grid-cols-4 gap-3 mt-6 animate-fade-in-up delay-300'>
+					{/* <div className='grid grid-cols-2 lg:grid-cols-4 gap-3 mt-6 animate-fade-in-up delay-300'>
 						{[
 							{title: '50,000+ Happy Clients', icon: '👥'},
 							{title: '4.9★ Google Rating', icon: '⭐'},
@@ -119,10 +119,10 @@ export default function HeroSection() {
 								<div className='font-medium'>{f.title}</div>
 							</div>
 						))}
-					</div>
+					</div> */}
 
 					{/* CTA Buttons */}
-					<div className='flex flex-wrap gap-3 mt-6 animate-fade-in-left delay-400'>
+					<div className='flex flex-wrap gap-3 mt-6 animate-fade-in-left delay-400 justify-center lg:justify-start'>
 						<button className='cursor-pointer bg-teal-600 text-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-teal-700 hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl'>
 							Chat on WhatsApp
 						</button>

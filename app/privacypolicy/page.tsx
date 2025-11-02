@@ -28,7 +28,7 @@ export default function PrivacyPolicy() {
 						opacity: 0;
 					}
 				`}</style>
-				<div className='max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+				<div className='max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 py-12'>
 					{/* Header Section */}
 					<div className='bg-linear-to-r from-teal-600 to-blue-700 rounded-xl p-8 mb-8 text-white shadow-lg header-fade'>
 						<h1 className='text-3xl sm:text-4xl font-bold mb-3'>

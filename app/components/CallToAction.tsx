@@ -6,15 +6,15 @@ import Link from 'next/link'
 
 export default function CallToAction() {
 	return (
-		<section className='relative overflow-hidden bg-linear-to-br from-blue-50 via-white to-blue-100 py-24 px-4'>
+		<section className='relative overflow-hidden bg-linear-to-br from-teal-50 via-white to-cyan-50 py-24 px-4'>
 			{/* Decorative Blurs - Static for performance */}
 			<div className='absolute inset-0 overflow-hidden pointer-events-none'>
-				<div className='absolute -top-24 -left-20 w-72 h-72 bg-blue-300/20 rounded-full blur-3xl' />
-				<div className='absolute bottom-0 -right-20 w-72 h-72 bg-yellow-200/30 rounded-full blur-3xl' />
+				<div className='absolute -top-24 -left-20 w-72 h-72 bg-teal-300/20 rounded-full blur-3xl' />
+				<div className='absolute bottom-0 -right-20 w-72 h-72 bg-cyan-200/30 rounded-full blur-3xl' />
 			</div>
 
 			{/* Main Card */}
-			<div className='relative z-10 max-w-5xl mx-auto'>
+			<div className='relative z-10 max-w-5xl mx-auto px-6 sm:px-8 lg:px-12'>
 				<motion.div
 					initial={{opacity: 0, y: 30}}
 					whileInView={{opacity: 1, y: 0}}
@@ -43,7 +43,7 @@ export default function CallToAction() {
 							transition={{duration: 0.2}}
 							className='bg-white shadow-md rounded-2xl p-5 border border-gray-100 flex flex-col items-center justify-center transition-shadow hover:shadow-lg'
 							style={{willChange: 'transform'}}>
-							<PhoneCall className='text-blue-600 w-8 h-8 mb-3' />
+							<PhoneCall className='text-teal-600 w-8 h-8 mb-3' />
 							<p className='font-medium text-gray-800'>Call Us</p>
 							<span className='text-sm text-gray-600'>+91-XXXXXXXXXX</span>
 						</motion.div>
@@ -53,7 +53,7 @@ export default function CallToAction() {
 							transition={{duration: 0.2}}
 							className='bg-white shadow-md rounded-2xl p-5 border border-gray-100 flex flex-col items-center justify-center transition-shadow hover:shadow-lg'
 							style={{willChange: 'transform'}}>
-							<Mail className='text-red-500 w-8 h-8 mb-3' />
+							<Mail className='text-teal-500 w-8 h-8 mb-3' />
 							<p className='font-medium text-gray-800'>Email Us</p>
 							<span className='text-sm text-gray-600'>
 								myonlinecaservices@gmail.com
@@ -65,12 +65,12 @@ export default function CallToAction() {
 							transition={{duration: 0.2}}
 							className='bg-white shadow-md rounded-2xl p-5 border border-gray-100 flex flex-col items-center justify-center transition-shadow hover:shadow-lg'
 							style={{willChange: 'transform'}}>
-							<MessageCircle className='text-green-500 w-8 h-8 mb-3' />
+							<MessageCircle className='text-teal-500 w-8 h-8 mb-3' />
 							<p className='font-medium text-gray-800'>WhatsApp</p>
 							<Link
 								href='https://wa.me/919999999999'
 								target='_blank'
-								className='text-sm text-green-700 hover:underline'>
+								className='text-sm text-teal-700 hover:underline'>
 								Chat with Us
 							</Link>
 						</motion.div>
@@ -80,7 +80,7 @@ export default function CallToAction() {
 					<div className='text-center'>
 						<Link
 							href='/contact'
-							className='relative inline-flex items-center gap-2 px-8 py-3 font-semibold text-white rounded-full bg-linear-to-r from-violet-600 to-fuchsia-600 shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 group'
+							className='relative inline-flex items-center gap-2 px-8 py-3 font-semibold text-white rounded-full bg-linear-to-r from-teal-500 to-cyan-600 shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 group'
 							style={{willChange: 'transform'}}>
 							<span className='relative z-10 flex items-center'>
 								Submit Your Request
