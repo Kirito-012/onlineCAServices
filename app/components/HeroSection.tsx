@@ -11,7 +11,7 @@ export default function HeroSection() {
 	})
 
 	return (
-		<section className='relative text-white flex items-center justify-center bg-linear-to-br from-teal-600 via-teal-700 to-blue-900'>
+		<section className='relative text-white h-[130vh] md:h-screen flex items-center justify-center bg-linear-to-br from-teal-600 via-teal-700 to-blue-900'>
 			<style jsx>{`
 				@keyframes fadeInUp {
 					from {
