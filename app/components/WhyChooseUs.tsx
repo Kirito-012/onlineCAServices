@@ -18,33 +18,33 @@ export default function WhyChooseUs() {
 	const features = [
 		{
 			icon: Users,
-			title: 'Expert CA Team',
-			desc: 'Qualified professionals with years of experience in taxation and compliance.',
+			title: 'Verified Experts',
+			desc: 'You are connected only with qualified professionals who have relevant credentials..',
 		},
 		{
 			icon: IndianRupee,
 			title: 'Transparent Pricing',
-			desc: 'No hidden fees. Pay only for what you see. Complete pricing transparency.',
+			desc: 'You get clear cost estimates and scope before work starts.',
 		},
 		{
 			icon: UploadCloud,
-			title: '100% Digital Process',
-			desc: 'Upload documents securely online. Track progress in real-time.',
+			title: 'Fully Online Process',
+			desc: 'No office visits - complete digital interaction and secure document handling.',
 		},
 		{
 			icon: Clock,
-			title: 'Fast Turnaround',
-			desc: 'Get your work done within 24–48 hours, meeting all deadlines.',
+			title: 'User Support',
+			desc: 'Friendly coordination and responsive assistance throughout your journey.',
 		},
 		{
 			icon: Globe,
-			title: 'Pan India Support',
-			desc: 'Serving businesses across all states and union territories.',
+			title: 'All India Availability',
+			desc: 'Services accessible in every state and city across India.',
 		},
 		{
 			icon: Shield,
 			title: 'Data Security',
-			desc: 'Bank-grade encryption ensures your sensitive information stays protected.',
+			desc: 'SSL-secured portal with strict information protection.',
 		},
 	]
 

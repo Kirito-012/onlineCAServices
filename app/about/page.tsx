@@ -38,7 +38,9 @@ export default function About() {
 		<>
 			<Header />
 			<main className='min-h-screen bg-gray-50 pt-20 pb-16'>
-				<style jsx global>{`
+				<style
+					jsx
+					global>{`
 					.animate-on-scroll {
 						opacity: 0;
 						transform: translateY(30px);
@@ -48,10 +50,18 @@ export default function About() {
 						opacity: 1;
 						transform: translateY(0);
 					}
-					.stagger-1 { transition-delay: 0.1s; }
-					.stagger-2 { transition-delay: 0.2s; }
-					.stagger-3 { transition-delay: 0.3s; }
-					.stagger-4 { transition-delay: 0.4s; }
+					.stagger-1 {
+						transition-delay: 0.1s;
+					}
+					.stagger-2 {
+						transition-delay: 0.2s;
+					}
+					.stagger-3 {
+						transition-delay: 0.3s;
+					}
+					.stagger-4 {
+						transition-delay: 0.4s;
+					}
 					.hero-fade {
 						animation: fadeInUp 0.8s ease-out forwards;
 					}
