@@ -3,6 +3,7 @@
 import {motion} from 'framer-motion'
 import {Mail, PhoneCall, MessageCircle} from 'lucide-react'
 import Link from 'next/link'
+import {getWhatsAppLink} from '../utils/whatsapp'
 
 export default function CallToAction() {
 	return (
@@ -45,7 +46,11 @@ export default function CallToAction() {
 							style={{willChange: 'transform'}}>
 							<PhoneCall className='text-teal-600 w-8 h-8 mb-3' />
 							<p className='font-medium text-gray-800'>Call Us</p>
-							<span className='text-sm text-gray-600'>+91-XXXXXXXXXX</span>
+							<a
+								href='tel:+918595236343'
+								className='text-sm text-teal-700 hover:underline'>
+								+91-8595236343
+							</a>
 						</motion.div>
 
 						<motion.div
@@ -55,9 +60,11 @@ export default function CallToAction() {
 							style={{willChange: 'transform'}}>
 							<Mail className='text-teal-500 w-8 h-8 mb-3' />
 							<p className='font-medium text-gray-800'>Email Us</p>
-							<span className='text-sm text-gray-600'>
+							<a
+								href='mailto:myonlinecaservices@gmail.com'
+								className='text-sm text-teal-700 hover:underline'>
 								myonlinecaservices@gmail.com
-							</span>
+							</a>
 						</motion.div>
 
 						<motion.div
@@ -68,7 +75,7 @@ export default function CallToAction() {
 							<MessageCircle className='text-teal-500 w-8 h-8 mb-3' />
 							<p className='font-medium text-gray-800'>WhatsApp</p>
 							<Link
-								href='https://wa.me/919999999999'
+								href={getWhatsAppLink()}
 								target='_blank'
 								className='text-sm text-teal-700 hover:underline'>
 								Chat with Us

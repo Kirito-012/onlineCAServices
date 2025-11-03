@@ -185,7 +185,7 @@ export default function Footer() {
 								<a
 									href='tel:+919876543210'
 									className='hover:text-teal-400 transition-colors'>
-									+91 12198 22222
+									+91 85952 36343
 								</a>
 							</li>
 							<li className='flex items-start gap-3 text-gray-400 text-sm group'>

@@ -3,6 +3,7 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import {useState} from 'react'
 import {ChevronDown, Mail, MessageCircle} from 'lucide-react'
+import {getWhatsAppLink} from '../utils/whatsapp'
 
 interface FAQItem {
 	question: string
@@ -191,7 +192,7 @@ export default function FAQ() {
 
 						<div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
 							<a
-								href='https://wa.me/911219822222'
+								href={getWhatsAppLink()}
 								target='_blank'
 								rel='noopener noreferrer'
 								className='bg-white text-teal-700 px-6 py-3 rounded-lg font-semibold hover:bg-teal-50 transition-all duration-200 shadow-md hover:shadow-lg flex items-center gap-2'>

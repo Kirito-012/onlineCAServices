@@ -1,6 +1,7 @@
 'use client'
 import {useState} from 'react'
 import {FaUser, FaPhoneAlt, FaEnvelope} from 'react-icons/fa'
+import {getWhatsAppLink} from '../utils/whatsapp'
 
 export default function HeroSection() {
 	const [formData, setFormData] = useState({
@@ -123,9 +124,13 @@ export default function HeroSection() {
 
 					{/* CTA Buttons */}
 					<div className='flex flex-wrap gap-3 mt-6 animate-fade-in-left delay-400 justify-center lg:justify-start'>
-						<button className='cursor-pointer bg-teal-600 text-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-teal-700 hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl'>
+						<a
+							href={getWhatsAppLink()}
+							target='_blank'
+							rel='noopener noreferrer'
+							className='cursor-pointer bg-teal-600 text-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-teal-700 hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl'>
 							Chat on WhatsApp
-						</button>
+						</a>
 						<button className='cursor-pointer bg-white text-teal-700 border-2 border-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-teal-100 hover:scale-105 transition-all duration-200 shadow-lg'>
 							Book CA Consultation →
 						</button>
