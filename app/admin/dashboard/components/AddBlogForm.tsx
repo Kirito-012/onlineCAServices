@@ -161,7 +161,7 @@ export default function AddBlogForm({onBlogAdded}: AddBlogFormProps) {
 					maxLength={100}
 					required
 					className='w-full text-gray-800 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 placeholder:text-gray-500 transition-all'
-					placeholder='Enter meta title (max 60 characters)'
+					placeholder='Enter meta title (max 100 characters)'
 				/>
 				<p className='text-xs text-gray-700 mt-1'>
 					{metaTitle.length}/100 characters
@@ -180,7 +180,7 @@ export default function AddBlogForm({onBlogAdded}: AddBlogFormProps) {
 					required
 					rows={3}
 					className='w-full text-gray-800 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 placeholder:text-gray-500 transition-all'
-					placeholder='Enter meta description (max 160 characters)'
+					placeholder='Enter meta description (max 200 characters)'
 				/>
 				<p className='text-xs text-gray-700 mt-1'>
 					{metaDescription.length}/200 characters
