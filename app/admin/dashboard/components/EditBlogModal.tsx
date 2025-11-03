@@ -166,13 +166,13 @@ export default function EditBlogModal({
 							type='text'
 							value={metaTitle}
 							onChange={(e) => setMetaTitle(e.target.value)}
-							maxLength={60}
+							maxLength={100}
 							required
 							className='w-full text-gray-800 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 placeholder:text-gray-500 transition-all'
 							placeholder='Enter meta title'
 						/>
 						<p className='text-xs text-gray-500 mt-1'>
-							{metaTitle.length}/60 characters
+							{metaTitle.length}/100 characters
 						</p>
 					</div>
 
@@ -184,14 +184,14 @@ export default function EditBlogModal({
 						<textarea
 							value={metaDescription}
 							onChange={(e) => setMetaDescription(e.target.value)}
-							maxLength={160}
+							maxLength={200}
 							required
 							rows={3}
 							className='w-full text-gray-800 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 placeholder:text-gray-500 transition-all'
 							placeholder='Enter meta description'
 						/>
 						<p className='text-xs text-gray-500 mt-1'>
-							{metaDescription.length}/160 characters
+							{metaDescription.length}/200 characters
 						</p>
 					</div>
 

@@ -1,4 +1,4 @@
-import mongoose, {Schema, Document, Model} from 'mongoose'
+import mongoose, { Schema, Document, Model } from 'mongoose'
 
 export interface IFAQ {
 	question: string
@@ -29,7 +29,7 @@ const FAQSchema = new Schema<IFAQ>(
 			required: true,
 		},
 	},
-	{_id: false}
+	{ _id: false }
 )
 
 const BlogSchema = new Schema<IBlog>(
@@ -37,13 +37,13 @@ const BlogSchema = new Schema<IBlog>(
 		metaTitle: {
 			type: String,
 			required: [true, 'Meta title is required'],
-			maxlength: [60, 'Meta title cannot exceed 60 characters'],
+			maxlength: [100, 'Meta title cannot exceed 100 characters'],
 			trim: true,
 		},
 		metaDescription: {
 			type: String,
 			required: [true, 'Meta description is required'],
-			maxlength: [160, 'Meta description cannot exceed 160 characters'],
+			maxlength: [200, 'Meta description cannot exceed 200 characters'],
 			trim: true,
 		},
 		image: {
@@ -95,7 +95,7 @@ BlogSchema.pre('save', async function (next) {
 		let counter = 1
 
 		// Check for uniqueness
-		while (await mongoose.models.Blog?.findOne({slug, _id: {$ne: this._id}})) {
+		while (await mongoose.models.Blog?.findOne({ slug, _id: { $ne: this._id } })) {
 			slug = `${baseSlug}-${counter}`
 			counter++
 		}
@@ -106,9 +106,9 @@ BlogSchema.pre('save', async function (next) {
 })
 
 // Indexes for better query performance
-BlogSchema.index({slug: 1})
-BlogSchema.index({dateCreated: -1})
-BlogSchema.index({createdAt: -1})
+BlogSchema.index({ slug: 1 })
+BlogSchema.index({ dateCreated: -1 })
+BlogSchema.index({ createdAt: -1 })
 
 const Blog: Model<IBlog> =
 	mongoose.models.Blog || mongoose.model<IBlog>('Blog', BlogSchema)
