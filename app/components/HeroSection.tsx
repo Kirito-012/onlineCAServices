@@ -88,7 +88,7 @@ export default function HeroSection() {
 			`}</style>
 			<div className='absolute inset-0 bg-linear-to-t from-black/20 to-transparent'></div>
 
-			<div className='relative max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-10 px-6 sm:px-8 lg:px-12 z-10 py-12'>
+			<div className='relative max-w-7xl mt-16 mx-auto flex flex-col lg:flex-row items-center justify-center gap-10 px-6 sm:px-8 lg:px-12 z-10 py-12'>
 				{/* Left Content */}
 				<div className='lg:w-1/2 space-y-5 text-center lg:text-left w-full'>
 					<h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-bold leading-tight animate-fade-in-left'>
@@ -138,7 +138,7 @@ export default function HeroSection() {
 				</div>
 
 				{/* Right Form */}
-				<div className='w-full max-w-md mx-auto lg:mx-0 bg-linear-to-br from-white/85 via-teal-50/75 to-blue-50/80 backdrop-blur-md rounded-xl shadow-2xl border border-white/40 p-6 lg:p-7 animate-fade-in-right delay-500'>
+				<div className='w-full max-w-md  mx-auto lg:mx-0 bg-linear-to-br from-white/85 via-teal-50/75 to-blue-50/80 backdrop-blur-md rounded-xl shadow-2xl border border-white/40 p-6 lg:p-7 animate-fade-in-right delay-500'>
 					<h2 className='text-xl font-bold text-center text-gray-900 mb-2'>
 						Request a Callback
 					</h2>

@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import WhyChooseUs from './components/WhyChooseUs'
 import FAQSection from './components/FAQSection'
 import CallToAction from './components/CallToAction'
+import StepsSection from './components/StepsSection'
 
 export default function Home() {
 	return (
@@ -11,6 +12,7 @@ export default function Home() {
 			<Header />
 			<HeroSection />
 			<WhyChooseUs />
+			<StepsSection />	
 			<FAQSection />
 			<CallToAction />
 			<Footer />

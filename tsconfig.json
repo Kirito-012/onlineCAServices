@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "app/components/AnimatedSection.jsx", "app/components/SectionTitle.jsx"  ],
   "exclude": ["node_modules"]
 }
