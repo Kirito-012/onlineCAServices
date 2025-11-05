@@ -196,7 +196,7 @@ export default function Footer() {
 								<a
 									href='mailto:support@onlinecaservices.in'
 									className='hover:text-teal-400 transition-colors break-all'>
-									support@onlinecaservices.in
+									 myonlinecaservices@gmail.com
 								</a>
 							</li>
 							<li className='flex items-start gap-3 text-gray-400 text-sm group'>

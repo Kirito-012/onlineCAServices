@@ -13,7 +13,7 @@ export default function ContactPage() {
       <Header />
       <main className="bg-gray-50 text-gray-800 overflow-hidden">
         {/* ✅ Hero Section */}
-        <section className="relative py-20 md:py-28 h-[70vh] flex items-center justify-center text-center text-white">
+        <section className="relative py-20 md:py-28 h-[75vh] flex items-center justify-center text-center text-white">
           {/* Background Image */}
           <div className="absolute inset-0">
             <img
@@ -79,7 +79,7 @@ export default function ContactPage() {
                 {
                   icon: <Phone className="text-gray-700" size={22} />,
                   title: "Call Us",
-                  text: "+91 89300 00984",
+                  text: "+91 85952 36343",
                 },
               ].map((item, i) => (
                 <div
@@ -180,7 +180,7 @@ export default function ContactPage() {
         </section>
 
         {/* ✅ Map Section */}
-        <section className="py-20 bg-gray-50 text-center px-4">
+        {/* <section className="py-20 bg-gray-50 text-center px-4">
           <h3 className="text-gray-600 uppercase tracking-wider">Find Us</h3>
           <h2 className="text-3xl font-bold text-gray-900 border-b-4 border-teal-600 inline-block mb-10">
             Visit Our Office
@@ -195,7 +195,7 @@ export default function ContactPage() {
               loading="lazy"
             ></iframe>
           </div>
-        </section>
+        </section> */}
 
         {/* ✅ Office Hours */}
         <section className="py-16 text-center bg-gray-50 px-4">
@@ -203,18 +203,18 @@ export default function ContactPage() {
           <h2 className="text-3xl font-bold text-gray-900 border-b-4 border-teal-600 inline-block mb-10">
             Office Hours
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className=" max-w-2xl mx-auto">
             <div className="bg-gray-200 p-8 rounded-xl">
               <h4 className="font-semibold text-lg">Weekdays</h4>
               <p className="text-gray-600 mt-2">
-                Monday – Friday: 9:00 AM – 9:00 PM
+                Monday – Sunday: 9:00 AM – 9:00 PM
               </p>
             </div>
-            <div className="bg-gray-200 p-8 rounded-xl">
+            {/* <div className="bg-gray-200 p-8 rounded-xl">
               <h4 className="font-semibold text-lg">Weekends</h4>
               <p className="text-gray-600 mt-2">Saturday: 10:00 AM – 2:00 PM</p>
               <p className="text-gray-600">Sunday: Closed</p>
-            </div>
+            </div> */}
           </div>
         </section>
 

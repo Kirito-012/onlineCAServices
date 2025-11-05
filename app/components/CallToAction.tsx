@@ -78,7 +78,7 @@ export default function CallToAction() {
 								href={getWhatsAppLink()}
 								target='_blank'
 								className='text-sm text-teal-700 hover:underline'>
-								Chat with Us
+								+91-8595236343
 							</Link>
 						</motion.div>
 					</div>

@@ -21,7 +21,7 @@ export default function ServicesPage() {
     
     <main className="bg-gray-50 text-gray-900">
       {/* HERO SECTION */}
-      <section className="relative bg-[url('/s4.png')] bg-cover bg-center bg-no-repeat max-w-7xl mx-auto px-6 py-16 md:py-20 text-center text-white">
+      <section className="relative bg-[url('/S1.png')] bg-cover bg-center bg-no-repeat max-w-7xl mx-auto px-6 py-16 md:py-20 text-center text-white">
         <div className="absolute inset-0 bg-black/40"></div> {/* Overlay */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
