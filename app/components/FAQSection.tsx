@@ -70,7 +70,7 @@ export default function FAQSection() {
 					whileInView={{opacity: 1, y: 0}}
 					transition={{duration: 0.6}}
 					className='text-center mb-10'>
-					<h2 className='text-3xl text-teal-400 md:text-4xl font-bold mb-2'>
+					<h2 className='text-3xl bg-linear-to-r from-blue-600 via-teal-400 to-gray-900 bg-clip-text text-transparent md:text-4xl font-bold mb-2'>
 						Frequently Asked Questions
 					</h2>
 					<p className='text-gray-600 max-w-2xl mx-auto'>

@@ -161,6 +161,14 @@ export default function Footer() {
 									Refund Policy
 								</Link>
 							</li>
+							<li>
+								<Link
+									href='/copyrightpolicy'
+									className='text-gray-400 hover:text-teal-400 transition-colors text-sm flex items-center gap-2 group'>
+									<span className='w-0 h-0.5 bg-teal-400 group-hover:w-4 transition-all duration-300'></span>
+									Copyright Policy
+								</Link>
+							</li>
 						</ul>
 					</div>
 

@@ -32,7 +32,7 @@ export default function StepsSection() {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold bg-linear-to-r from-cyan-600 to-teal-400 bg-clip-text text-transparent"
+          className="text-3xl md:text-4xl font-bold bg-linear-to-r from-blue-600 via-teal-400 to-gray-900 bg-clip-text text-transparent"
         >
           Only 3 Easy Steps to Get Started
         </motion.h2>

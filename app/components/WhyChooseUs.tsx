@@ -83,7 +83,7 @@ export default function WhyChooseUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl md:text-5xl font-bold mb-5 bg-linear-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent"
+            className="text-3xl md:text-5xl font-bold mb-5 bg-linear-to-r from-blue-600 via-teal-400 to-gray-900 bg-clip-text text-transparent"
           >
             India's Most Trusted Online CA Services
           </motion.h2>
