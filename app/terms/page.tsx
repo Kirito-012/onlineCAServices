@@ -30,7 +30,7 @@ export default function PrivacyPolicy() {
           {/* Header Section */}
           <div className="bg-linear-to-r from-teal-600 to-blue-700 rounded-xl p-8 mb-8 text-white shadow-lg header-fade">
             <h1 className="text-3xl sm:text-4xl font-bold mb-3">
-              Terms of Use 
+              Terms of Use
             </h1>
             <p className="text-teal-50 text-lg">Online CA Services</p>
           </div>
@@ -39,160 +39,74 @@ export default function PrivacyPolicy() {
           <div className="bg-white rounded-xl shadow-md p-6 sm:p-10 space-y-10 content-fade">
             {/* Section C: Terms of Use */}
             <section>
-              
+              {/* ✅ A. Terms & Conditions */}
+              <div className="mb-10">
+                {/* 1. Acceptance */}
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-teal-700 mb-3">
+                    1. Acceptance
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    By using this website or making any payment, you agree to
+                    these terms, the privacy policy, and refund policy.
+                  </p>
+                </div>
 
-              {/* 1. Acceptance of Terms */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  1. Acceptance of Terms
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Accessing this website implies acceptance of all terms,
-                  privacy policies, and disclaimers. Users unwilling to comply
-                  must discontinue use immediately.
-                </p>
-              </div>
+                {/* 2. Platform Nature */}
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-teal-700 mb-3">
+                    2. Platform Nature
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Online CA Services functions as an intermediary connecting
+                    users and professionals. It does not provide direct
+                    professional services.
+                  </p>
+                </div>
 
-              {/* 2. Nature of Platform */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  2. Nature of Platform
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Online CA Services operates purely as an online connector that
-                  links users to qualified professionals. It does not provide
-                  direct professional or consultancy services.
-                </p>
-              </div>
+                {/* 3. User Obligations */}
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-teal-700 mb-3">
+                    3. User Obligations
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed mb-2">
+                    Users must:
+                  </p>
+                  <ul className="list-disc pl-6 text-gray-700 leading-relaxed space-y-1">
+                    <li>Provide correct and valid details.</li>
+                    <li>
+                      Not misuse or attempt to access data of other users.
+                    </li>
+                    <li>
+                      Verify the authenticity of professionals independently.
+                    </li>
+                  </ul>
+                </div>
 
-              {/* 3. Eligibility */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  3. Eligibility
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Users must be legally competent under Indian law to enter into
-                  contracts. Minors or entities lacking legal capacity are not
-                  permitted to use the portal.
-                </p>
-              </div>
+                {/* 4. Professional Engagement */}
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-teal-700 mb-3">
+                    4. Professional Engagement
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Any professional engagement occurs directly between user and
+                    professional. Online CA Services is not a party to any such
+                    contract.
+                  </p>
+                </div>
 
-              {/* 4. Registration */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  4. Registration
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Users providing contact details warrant that information is
-                  true, complete, and accurate. Misrepresentation may result in
-                  termination of access.
-                </p>
-              </div>
-
-              {/* 5. Professional Engagement */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  5. Professional Engagement
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Any engagement between user and professional occurs directly
-                  between those parties. Online CA Services is not involved in
-                  their contractual or commercial terms.
-                </p>
-              </div>
-
-              {/* 6. User Obligations */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  6. User Obligations
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Users agree not to post unlawful material, hack, scrape, or
-                  disrupt the site. Users must verify professionals
-                  independently.
-                </p>
-              </div>
-
-              {/* 7. Payments */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  7. Payments
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  If any payments are facilitated, they are made directly
-                  between the user and the professional. The portal does not
-                  handle client funds.
-                </p>
-              </div>
-
-              {/* 8. Intellectual Property */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  8. Intellectual Property
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  All website content is protected under the Copyright Act,
-                  1957. The descriptive use of "CA India" is permitted under
-                  Section 30(2)(a) of the Trade Marks Act, 1999.
-                </p>
-              </div>
-
-              {/* 9. Warranty Disclaimer */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  9. Warranty Disclaimer
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  This portal is provided "as is". Online CA Services offers no
-                  warranties regarding content accuracy or outcomes from
-                  engagements with professionals.
-                </p>
-              </div>
-
-              {/* 10. Limitation of Liability */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  10. Limitation of Liability
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Online CA Services shall not be liable for damages, losses, or
-                  claims arising from engagements between users and
-                  professionals or reliance on any content.
-                </p>
-              </div>
-
-              {/* 11. Indemnity */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  11. Indemnity
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Users agree to indemnify Online CA Services and its operators
-                  against all claims resulting from misuse or violation of these
-                  terms.
-                </p>
-              </div>
-
-              {/* 12. Termination */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  12. Termination
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Online CA Services reserves the right to restrict access to
-                  any user who violates these terms.
-                </p>
-              </div>
-
-              {/* 13. Governing Law and Jurisdiction */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  13. Governing Law and Jurisdiction
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  These Terms are governed by the laws of India, subject to the
-                  exclusive jurisdiction of Delhi courts.
-                </p>
+                {/* 5. Payments & Consultations */}
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-teal-700 mb-3">
+                    5. Payments & Consultations
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    All payments are collected securely via Razorpay. Once the
+                    user books an appointment or subscription, the payment is
+                    final and non-refundable as services are pre-scheduled or
+                    listing-based.
+                  </p>
+                </div>
               </div>
             </section>
 

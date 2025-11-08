@@ -30,7 +30,7 @@ export default function PrivacyPolicy() {
           {/* Header Section */}
           <div className="bg-linear-to-r from-teal-600 to-blue-700 rounded-xl p-8 mb-8 text-white shadow-lg header-fade">
             <h1 className="text-3xl sm:text-4xl font-bold mb-3">
-              Privacy Policy 
+              Privacy Policy
             </h1>
             <p className="text-teal-50 text-lg">Online CA Services</p>
           </div>
@@ -39,178 +39,103 @@ export default function PrivacyPolicy() {
           <div className="bg-white rounded-xl shadow-md p-6 sm:p-10 space-y-10 content-fade">
             {/* Section B: Privacy Policy */}
             <section>
-              
+              {/* ✅ B. Privacy Policy */}
+              <div className="mb-10">
+                
 
-              {/* 1. Definitions */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  1. Definitions
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  "User", "You", or "Your" refers to any individual accessing
-                  this portal. "Qualified professional" means an independent
-                  professional with relevant credentials engaged by the user
-                  through the platform.
-                </p>
-              </div>
+                {/* 1. Information Collected */}
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-teal-700 mb-3">
+                    1. Information Collected
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed mb-2">
+                    We may collect:
+                  </p>
+                  <ul className="list-disc pl-6 text-gray-700 leading-relaxed space-y-1">
+                    <li>Name, email, and contact number of users.</li>
+                    <li>
+                      Service details for appointment booking or subscription.
+                    </li>
+                    <li>
+                      Transaction data for payment verification (via Razorpay).
+                    </li>
+                    <li>
+                      Technical data (browser, IP, time logs) for analytics and
+                      security.
+                    </li>
+                  </ul>
+                </div>
 
-              {/* 2. Data Controller */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  2. Data Controller
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Online CA Services determines the purpose of data processing
-                  for the operation of this portal. Contact details for
-                  privacy-related queries can be added later by the site
-                  operator.
-                </p>
-              </div>
+                {/* 2. Purpose of Use */}
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-teal-700 mb-3">
+                    2. Purpose of Use
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed mb-2">
+                    Your data is used only for:
+                  </p>
+                  <ul className="list-disc pl-6 text-gray-700 leading-relaxed space-y-1">
+                    <li>Connecting you with verified professionals.</li>
+                    <li>Processing appointment or subscription payments.</li>
+                    <li>Sending meeting links, confirmations, or receipts.</li>
+                    <li>
+                      Fulfilling legal, tax, or accounting obligations under
+                      Indian law.
+                    </li>
+                  </ul>
+                </div>
 
-              {/* 3. Information Collected */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  3. Information Collected
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  We may collect (a) personal identifiers such as name, email,
-                  and phone number; (b) documents or information submitted for
-                  matching with professionals; (c) technical data such as IP
-                  address and browser information.
-                </p>
-              </div>
+                {/* 3. Data Sharing */}
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-teal-700 mb-3">
+                    3. Data Sharing
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Information is shared only with professionals or service
+                    providers essential to perform operations (Razorpay,
+                    hosting, analytics). No personal data is ever sold or
+                    disclosed for marketing.
+                  </p>
+                </div>
 
-              {/* 4. Purpose of Processing */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  4. Purpose of Processing
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Information collected is used solely for connecting you with a
-                  relevant qualified professional, responding to inquiries,
-                  improving portal performance, and complying with statutory
-                  obligations.
-                </p>
-              </div>
+                {/* 4. Payment Gateway Security */}
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-teal-700 mb-3">
+                    4. Payment Gateway Security
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    All online transactions are securely processed through
+                    Razorpay, which is PCI DSS compliant. Online CA Services
+                    does not store or access your payment card, UPI, or banking
+                    details.
+                  </p>
+                </div>
 
-              {/* 5. Legal Basis for Processing */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  5. Legal Basis for Processing
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Processing is based on user consent, contractual necessity
-                  (for referral purposes), and compliance with applicable Indian
-                  law.
-                </p>
-              </div>
+                {/* 5. Data Retention */}
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-teal-700 mb-3">
+                    5. Data Retention
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Data is stored only for as long as necessary for the service
+                    or legally required retention period.
+                  </p>
+                </div>
 
-              {/* 6. Data Sharing */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  6. Data Sharing
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Information is shared only with qualified professionals
-                  relevant to your request or with service providers required to
-                  operate the portal (hosting, analytics, etc.). No information
-                  is sold or traded.
-                </p>
-              </div>
-
-              {/* 7. User Due Diligence & Responsibility */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  7. User Due Diligence & Responsibility
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  By submitting data, you agree to independently verify any
-                  professional referred through this portal and hold Online CA
-                  Services harmless from any resulting disputes or losses.
-                </p>
-              </div>
-
-              {/* 8. Data Retention */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  8. Data Retention
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Information is retained only as long as necessary for the
-                  referral process or as legally required. Data is securely
-                  deleted thereafter.
-                </p>
-              </div>
-
-              {/* 9. Security Measures */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  9. Security Measures
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Industry-standard SSL encryption and restricted access
-                  policies are used to protect information. Despite precautions,
-                  the portal cannot guarantee absolute data security.
-                </p>
-              </div>
-
-              {/* 10. Cookies and Analytics */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  10. Cookies and Analytics
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Cookies are used to enhance site experience. Users can disable
-                  cookies via browser settings. Analytics tools help assess site
-                  performance without identifying individuals.
-                </p>
-              </div>
-
-              {/* 11. User Rights */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  11. User Rights
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  You may request access, correction, or deletion of your
-                  personal data by contacting the operator at the provided
-                  address.
-                </p>
-              </div>
-
-              {/* 12. Grievance Officer */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  12. Grievance Officer
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  A Grievance Officer will be appointed as per Rule 5(9) of the
-                  Information Technology (Reasonable Security Practices and
-                  Procedures and Sensitive Personal Data or Information) Rules,
-                  2011.
-                </p>
-              </div>
-
-              {/* 13. Policy Updates */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  13. Policy Updates
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  The Privacy Policy may be updated periodically. Continued use
-                  constitutes acceptance of any revisions.
-                </p>
-              </div>
-
-              {/* 14. Governing Law */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  14. Governing Law
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  All matters are governed by Indian law with exclusive
-                  jurisdiction in Delhi.
-                </p>
+                {/* 6. User Rights */}
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-teal-700 mb-3">
+                    6. User Rights
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed mb-2">
+                    You may request correction or deletion of your data by
+                    contacting our support email.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed">
+                    A Grievance Officer will be appointed under Rule 5(9) of the
+                    IT (Reasonable Security Practices) Rules, 2011.
+                  </p>
+                </div>
               </div>
             </section>
 

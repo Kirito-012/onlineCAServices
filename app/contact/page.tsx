@@ -13,7 +13,7 @@ export default function ContactPage() {
       <Header />
       <main className="bg-gray-50 text-gray-800 overflow-hidden">
         {/* ✅ Hero Section */}
-        <section className="relative py-20 md:py-28 h-[75vh] flex items-center justify-center text-center text-white">
+        <section className="relative py-20 md:py-28 h-[60vh] flex items-center justify-center text-center text-white">
           {/* Background Image */}
           <div className="absolute inset-0">
             <img
@@ -30,7 +30,7 @@ export default function ContactPage() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight"
+              className="text-3xl pt-12 sm:text-4xl md:text-5xl font-extrabold leading-tight"
             >
               Contact Us
             </motion.h1>
@@ -53,7 +53,7 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="bg-white rounded-2xl shadow-md p-6 sm:p-8"
+            className="bg-linear-to-br from-blue-100 via-white to-teal-100 rounded-2xl shadow-md p-6 sm:p-8"
           >
             <div className="text-center mb-8">
               <p className="text-gray-500 uppercase tracking-wide text-sm mb-2">
@@ -102,21 +102,14 @@ export default function ContactPage() {
               <h3 className="font-medium text-lg mb-3">Follow Us</h3>
               <div className="flex justify-center space-x-4">
                 <a
-                  href="https://www.instagram.com/anshul_architects/"
+                  href="https://www.instagram.com/onlinecaservices"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-gray-200 hover:bg-gray-300 p-4 rounded-full transition"
+                  className="bg-pink-50 hover:bg-gray-300 p-4 rounded-full transition"
                 >
-                  <Instagram className="w-6 h-6 text-[#008080]" />
+                  <Instagram className="w-6 h-6 text-[#d3499e]" />
                 </a>
-                <a
-                  href="https://www.facebook.com/sharma.anshul.upadhyay/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-gray-200 hover:bg-gray-300 p-4 rounded-full transition"
-                >
-                  <Facebook className="w-6 h-6 text-[#0B3D91]" />
-                </a>
+                
               </div>
             </div>
           </motion.div>
@@ -126,7 +119,7 @@ export default function ContactPage() {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-white rounded-2xl shadow-lg p-6 sm:p-8"
+            className="bg-linear-to-br from-teal-100 via-white to-blue-100 rounded-2xl shadow-lg p-6 sm:p-8"
           >
             <h2 className="text-2xl sm:text-3xl font-semibold mb-6 border-b-4 border-[#0B3D91] inline-block pb-1">
               Send Us a Message

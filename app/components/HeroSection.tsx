@@ -105,9 +105,14 @@ export default function HeroSection() {
             >
               Chat on WhatsApp
             </a>
-            <button className="cursor-pointer bg-white text-teal-700 border-2 border-white px-6 py-3 rounded-lg text-sm sm:text-base font-semibold hover:bg-teal-100 hover:scale-105 transition-all duration-200 shadow-lg">
+            <a
+              href="https://pages.razorpay.com/pl_Rcj2d8gbjeRmXZ/view"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block cursor-pointer bg-white text-teal-700 border-2 border-white px-6 py-3 rounded-lg text-sm sm:text-base font-semibold hover:bg-teal-100 hover:scale-105 transition-all duration-200 shadow-lg"
+            >
               Book CA Consultation →
-            </button>
+            </a>
           </div>
         </div>
 
@@ -148,12 +153,22 @@ export default function HeroSection() {
               />
             </div>
 
-            <select className="w-full px-3 py-2.5 text-sm sm:text-base rounded-lg text-gray-600 focus:ring-2 focus:ring-teal-600 focus:border-transparent outline-none transition-all">
-              <option>Select Service Interested In</option>
-              <option>Company Registration</option>
-              <option>GST Filing</option>
-              <option>Accounting & Tax</option>
-              <option>Trademark Registration</option>
+            <select
+              className="w-full px-3 py-2.5 text-sm sm:text-base rounded-lg text-gray-600 focus:ring-2 focus:ring-teal-600 focus:border-transparent outline-none transition-all"
+              defaultValue=""
+            >
+              <option value="" disabled>
+                Select Service Interested In
+              </option>
+              <option value="income-tax">Income Tax</option>
+              <option value="gst">GST</option>
+              <option value="accounting">Accounting</option>
+              <option value="business-registration">
+                Business Registration
+              </option>
+              <option value="compliances">Compliances</option>
+              <option value="finance">Finance</option>
+              <option value="other-products">Other Products</option>
             </select>
 
             <button
@@ -164,7 +179,7 @@ export default function HeroSection() {
             </button>
 
             <p className="text-center text-xs text-gray-500 mt-3">
-              🔒 Your data is safe with us. We value your privacy.
+              Your data is safe with us. We value your privacy.
             </p>
           </form>
         </div>

@@ -26,7 +26,7 @@ export default function StepsSection() {
   ];
 
   return (
-    <section className="relative bg-linear-to-br from-teal-50 via-white to-blue-50 py-20 px-6 md:px-12">
+    <section className="relative bg-linear-to-br from-teal-200 via-white to-blue-200 py-20 px-6 md:px-12">
       <div className="max-w-6xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: -30 }}

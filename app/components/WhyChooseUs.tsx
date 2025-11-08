@@ -49,8 +49,8 @@ export default function WhyChooseUs() {
   ];
 
   const stats = [
-    { value: "50,000+", label: "Satisfied Clients", icon: Users },
-    { value: "4.9", label: "Google Rating", icon: Star },
+    { value: "5000+", label: "Satisfied Clients", icon: Users },
+    { value: "5.0", label: "Google Rating", icon: Star },
     { value: "100%", label: "Accurate Service", icon: CheckCircle },
     { value: "24/7", label: "Expert Support", icon: Headset },
   ];

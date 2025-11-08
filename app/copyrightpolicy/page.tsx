@@ -30,7 +30,7 @@ export default function PrivacyPolicy() {
           {/* Header Section */}
           <div className="bg-linear-to-r from-teal-600 to-blue-700 rounded-xl p-8 mb-8 text-white shadow-lg header-fade">
             <h1 className="text-3xl sm:text-4xl font-bold mb-3">
-              Copyright & Intellectual Property Notice 
+              Copyright & Intellectual Property Notice
             </h1>
             <p className="text-teal-50 text-lg">Online CA Services</p>
           </div>
@@ -39,64 +39,48 @@ export default function PrivacyPolicy() {
           <div className="bg-white rounded-xl shadow-md p-6 sm:p-10 space-y-10 content-fade">
             {/* Section E: Copyright & Intellectual Property Notice */}
             <section>
-             
-
-              {/* 1. Ownership */}
+              {/* 1. Ownership and Intellectual Property */}
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  1. Ownership
+                  1. Ownership and Intellectual Property
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  All content, layout, and visual design of Online CA Services
-                  are the intellectual property of its operators, protected
-                  under the Copyright Act, 1957.
+                  All website design, layout, and written content are exclusive
+                  property of Online CA Services, protected under the Copyright
+                  Act, 1957.
                 </p>
               </div>
 
-              {/* 2. Limited License */}
+              {/* 2. Legal Use of CA India */}
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  2. Limited License
+                  2. Legal Use of “CA India”
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Users are granted a limited, non-exclusive, and
-                  non-transferable right to access this site for personal
-                  informational purposes only.
+                  Use of the descriptive term “CA India” is legally permissible
+                  under Section 30(2)(a) of the Trade Marks Act, 1999.
                 </p>
               </div>
 
-              {/* 3. Prohibited Uses */}
+              {/* 3. Restriction on Copying */}
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  3. Prohibited Uses
+                  3. Restriction on Copying
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Users shall not copy, reproduce, distribute, or create
-                  derivative works of site content without written consent.
+                  No portion of this site may be copied, reproduced, or
+                  republished without written consent.
                 </p>
               </div>
 
-              {/* 4. Reporting Infringement */}
+              {/* 4. Infringement Notice */}
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  4. Reporting Infringement
+                  4. Infringement Notice
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  If you believe your copyrighted material has been used
-                  improperly, you may notify the operator using the provided
-                  contact details.
-                </p>
-              </div>
-
-              {/* 5. Legal Reference */}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-teal-700 mb-3">
-                  5. Legal Reference
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  All use of "CA India" is descriptive under Section 30(2)(a) of
-                  the Trade Marks Act, 1999, and does not imply association with
-                  ICAI.
+                  Any alleged infringement notice may be addressed to the
+                  operator via email.
                 </p>
               </div>
             </section>

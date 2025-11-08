@@ -64,7 +64,7 @@ export default function About() {
         `}</style>
 
         {/* ✅ Hero Section */}
-        <section className="relative py-20 md:py-28 h-[75vh] flex items-center justify-center text-center text-white">
+        <section className="relative py-20 md:py-28 h-[60vh] flex items-center justify-center text-center text-white">
           <div className="absolute inset-0">
             <img
               src="/A1.png"
@@ -78,7 +78,7 @@ export default function About() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight"
+              className="text-3xl pt-12 sm:text-4xl md:text-5xl font-extrabold leading-tight"
             >
               About Us
             </motion.h1>
@@ -324,12 +324,14 @@ export default function About() {
               or use our Contact Form — we’ll ensure you’re matched with the
               right expert quickly.
             </p>
-            <Link
-              href="/contact"
+            <a
+              href="https://wa.me/918595236343"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-teal-600 text-white px-8 py-3.5 rounded-lg text-base font-semibold hover:bg-teal-700 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               Connect with a Professional →
-            </Link>
+            </a>
           </div>
         </section>
       </main>

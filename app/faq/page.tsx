@@ -100,9 +100,9 @@ export default function FAQPage() {
   return (
     <>
       <Header />
-      <main className="bg-gray-50 text-gray-800 overflow-hidden">
+      <main className="bg-linear-to-br from-blue-300 via-white to-teal-300 text-gray-800 overflow-hidden">
         {/* ✅ Hero Section */}
-        <section className="relative py-20 md:py-28 h-[80vh] flex items-center justify-center text-center text-white">
+        <section className="relative py-20 md:py-28 h-[60vh] flex items-center justify-center text-center text-white">
           <div className="absolute inset-0">
             <img
               src="/f1.jpeg"
@@ -117,7 +117,7 @@ export default function FAQPage() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight"
+              className="text-3xl pt-12 sm:text-4xl md:text-5xl font-extrabold leading-tight"
             >
               Frequently Asked Questions
             </motion.h1>
@@ -133,7 +133,7 @@ export default function FAQPage() {
         </section>
 
         {/* ✅ FAQ Section */}
-        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 py-16">
+        <section className="max-w-6xl  mx-auto px-4 sm:px-6 lg:px-12 py-16">
           <div className="space-y-5">
             {faqs.map((faq, index) => (
               <motion.div
@@ -200,14 +200,14 @@ export default function FAQPage() {
                 href={getWhatsAppLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-teal-700 px-6 py-3 rounded-lg font-semibold hover:bg-teal-50 transition-all duration-200 shadow-md hover:shadow-lg flex items-center gap-2"
+                className="bg-green-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-green-200 transition-all duration-200 shadow-md hover:shadow-lg flex items-center gap-2"
               >
                 <MessageCircle size={20} />
                 Chat on WhatsApp
               </a>
               <a
                 href="mailto:myonlinecaservices@gmail.com"
-                className="bg-teal-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-900 transition-all duration-200 shadow-md hover:shadow-lg flex items-center gap-2"
+                className="bg-white text-black px-6 py-3 rounded-lg font-semibold  transition-all duration-200 shadow-md hover:shadow-lg flex items-center gap-2"
               >
                 <Mail size={20} />
                 Email Us
