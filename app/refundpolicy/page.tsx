@@ -30,7 +30,7 @@ export default function PrivacyPolicy() {
           {/* Header Section */}
           <div className="bg-linear-to-r from-teal-600 to-blue-700 rounded-xl p-8 mb-8 text-white shadow-lg header-fade">
             <h1 className="text-3xl sm:text-4xl font-bold mb-3">
-              Comprehensive Legal Policies
+              Refund & Cancellation Legal Policies
             </h1>
             <p className="text-teal-50 text-lg">Online CA Services</p>
           </div>
@@ -39,9 +39,7 @@ export default function PrivacyPolicy() {
           <div className="bg-white rounded-xl shadow-md p-6 sm:p-10 space-y-10 content-fade">
             {/* Section D: Refund & Cancellation Policy */}
             <section>
-              <h2 className="text-2xl font-bold bg-linear-to-r from-gray-900 mb-6 pb-3 border-b-2 border-teal-500">
-                &bull; Refund & Cancellation Policy
-              </h2>
+              
 
               {/* 1. Nature of Fees */}
               <div className="mb-6">
