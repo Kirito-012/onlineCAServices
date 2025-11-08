@@ -73,7 +73,7 @@ export default function Header() {
 						href='/contact'
 						className='bg-teal-600 text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-teal-700 transition-all duration-200 flex items-center gap-2 shadow-sm hover:shadow'>
 						<Phone size={16} />
-						Talk to Expert
+						Book CA Call
 					</Link>
 				</div>
 				<button
@@ -139,7 +139,7 @@ export default function Header() {
 							href='/contact'
 							onClick={() => setIsOpen(false)}
 							className='bg-teal-600 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-teal-700 transition-all duration-200 mt-2'>
-							Talk to Expert
+							Book CA Call
 						</Link>
 					</nav>
 				</div>
