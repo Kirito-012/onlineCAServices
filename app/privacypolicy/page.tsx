@@ -30,7 +30,7 @@ export default function PrivacyPolicy() {
           {/* Header Section */}
           <div className="bg-linear-to-r from-teal-600 to-blue-700 rounded-xl p-8 mb-8 text-white shadow-lg header-fade">
             <h1 className="text-3xl sm:text-4xl font-bold mb-3">
-              Privacy Policy Legal Policies
+              Privacy Policy 
             </h1>
             <p className="text-teal-50 text-lg">Online CA Services</p>
           </div>
