@@ -109,7 +109,6 @@ export default function ContactPage() {
                 >
                   <Instagram className="w-6 h-6 text-[#d3499e]" />
                 </a>
-                
               </div>
             </div>
           </motion.div>
@@ -146,14 +145,22 @@ export default function ContactPage() {
               />
             </div>
             <div className="mt-5">
-              <select className="p-3 border rounded-md w-full focus:ring-2 focus:ring-[#008080] outline-none">
-                <option>Select Service Type</option>
-                <option>Income Tax</option>
-                <option>GST</option>
-                <option>Accounting</option>
-                <option>Business Registration</option>
-                <option>Compliance & Advisory</option>
-                <option>Others</option>
+              <select
+                className="w-full px-3 py-2.5 text-sm sm:text-base rounded-lg text-gray-600 focus:ring-2 focus:ring-teal-600 focus:border-transparent outline-none transition-all"
+                defaultValue=""
+              >
+                <option value="" disabled>
+                  Select Service Interested In
+                </option>
+                <option value="income-tax">Income Tax</option>
+                <option value="gst">GST</option>
+                <option value="accounting">Accounting</option>
+                <option value="business-registration">
+                  Business Registration
+                </option>
+                <option value="compliances">Compliances</option>
+                <option value="finance">Finance</option>
+                <option value="other-products">Other Products</option>
               </select>
             </div>
             <div className="mt-5">
@@ -192,13 +199,13 @@ export default function ContactPage() {
 
         {/* ✅ Office Hours */}
         <section className="py-16 text-center bg-gray-50 px-4">
-          <h3 className="text-gray-600 uppercase tracking-wider">When to Visit</h3>
+          {/* <h3 className="text-gray-600 uppercase tracking-wider">When to Visit</h3> */}
           <h2 className="text-3xl font-bold text-gray-900 border-b-4 border-teal-600 inline-block mb-10">
             Office Hours
           </h2>
           <div className=" max-w-2xl mx-auto">
             <div className="bg-gray-200 p-8 rounded-xl">
-              <h4 className="font-semibold text-lg">Weekdays</h4>
+              <h4 className="font-semibold text-lg">Work Timing</h4>
               <p className="text-gray-600 mt-2">
                 Monday – Sunday: 9:00 AM – 9:00 PM
               </p>
@@ -208,6 +215,20 @@ export default function ContactPage() {
               <p className="text-gray-600 mt-2">Saturday: 10:00 AM – 2:00 PM</p>
               <p className="text-gray-600">Sunday: Closed</p>
             </div> */}
+          </div>
+        </section>
+        {/* Website Management Section */}
+        <section className="bg-gray-50 py-10 border-t border-gray-200">
+          <div className="max-w-6xl mx-auto px-4 text-center">
+            <p className="text-sm md:text-base text-gray-700 font-medium">
+              Website Managed by{" "}
+              <span className="font-semibold text-[#0B3D91]">
+                Manish Bhatnagar
+              </span>
+            </p>
+            <p className="text-sm text-gray-600 mt-1">
+              410, Near Yadav Chopal, Kapashera, New Delhi - 110037
+            </p>
           </div>
         </section>
 

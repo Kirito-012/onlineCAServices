@@ -7,7 +7,6 @@ import {
   Building2,
   ShieldCheck,
   Briefcase,
-  CheckCircle2,
 } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -72,7 +71,10 @@ export default function ServicesPage() {
         </section>
 
         {/* GRID OF SERVICE CARDS */}
-        <section id="all-services"  className="max-w-7xl mt-10 mx-auto px-6 pb-16">
+        <section
+          id="all-services"
+          className="max-w-7xl mt-10 mx-auto px-6 pb-16"
+        >
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -204,21 +206,28 @@ export default function ServicesPage() {
 }
 
 /* --- SERVICE CARD COMPONENT --- */
+
 type ServiceCardProps = {
   icon: React.ReactNode;
   title: string;
   desc: string;
   bullets: string[];
   cta: string;
+  priceAmount: string;
 };
 
-function ServiceCard({ icon, title, desc, bullets, cta }: ServiceCardProps) {
+function ServiceCard({ icon, title, desc, bullets, cta, priceAmount }: ServiceCardProps) {
   return (
-    <div className="bg-white rounded-2xl p-6 shadow hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between">
+    <div className="bg-white rounded-2xl p-6 shadow hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between h-full">
       <div>
+        {/* Icon */}
         <div className="flex items-center gap-3 mb-3">{icon}</div>
+
+        {/* Title & Description */}
         <h3 className="text-lg font-semibold">{title}</h3>
         <p className="text-sm text-gray-600 mt-2">{desc}</p>
+
+        {/* Bullets */}
         <ul className="mt-4 space-y-2 text-sm text-gray-700">
           {bullets.map((b, i) => (
             <li key={i} className="flex items-start gap-2">
@@ -227,7 +236,15 @@ function ServiceCard({ icon, title, desc, bullets, cta }: ServiceCardProps) {
             </li>
           ))}
         </ul>
+
+        {/* Pricing */}
+        <div className="mt-4 text-sm">
+          <span className="text-xl font-semibold text-gray-800">Pricing: </span>
+          <span className="text-[#008080] font-bold text-base">{priceAmount}</span>
+        </div>
       </div>
+
+      {/* CTA */}
       <div className="mt-6">
         <a
           href="/contact"
@@ -253,6 +270,7 @@ const services = [
       "Tax Planning & Advisory",
     ],
     cta: "File My ITR Online →",
+    priceAmount: "₹499/-",
   },
   {
     icon: <ClipboardCheck className="w-6 h-6 text-[#008080]" />,
@@ -265,10 +283,11 @@ const services = [
       "ITC Reconciliation",
     ],
     cta: "Connect with a GST Expert →",
+    priceAmount: "₹999/-",
   },
   {
     icon: <Users className="w-6 h-6 text-[#008080]" />,
-    title: "CA for Accounting & Bookkeeping",
+    title: "Online CA for Accounting & Bookkeeping",
     desc: "Qualified accountants to manage your books, payroll, and reports efficiently and securely.",
     bullets: [
       "Monthly Bookkeeping (Tally / Zoho / QuickBooks)",
@@ -277,10 +296,11 @@ const services = [
       "Virtual CFO Support",
     ],
     cta: "Get My Accounts Managed →",
+    priceAmount: "₹499/-",
   },
   {
     icon: <Building2 className="w-6 h-6 text-[#008080]" />,
-    title: "CA for Company Registration & Business Setup",
+    title: "Online CA for Company Registration & Business Setup",
     desc: "End-to-end support for business setup — from registration to startup advisory.",
     bullets: [
       "Proprietorship / LLP / Pvt Ltd / OPC Registration",
@@ -288,10 +308,11 @@ const services = [
       "Shop & Establishment License",
     ],
     cta: "Register My Business →",
+    priceAmount: "₹999/-",
   },
   {
     icon: <ShieldCheck className="w-6 h-6 text-[#008080]" />,
-    title: "CA for Business Compliance & Advisory",
+    title: "Online CA for Business Compliance & Advisory",
     desc: "Stay compliant with ROC filings, Director KYC, PAN/TAN, legal drafting, and audits.",
     bullets: [
       "ROC Annual Filings (MGT-7, AOC-4)",
@@ -299,10 +320,11 @@ const services = [
       "Audit & Due Diligence Reports",
     ],
     cta: "Ensure My Business Compliance →",
+    priceAmount: "₹1,999/-",
   },
   {
     icon: <Briefcase className="w-6 h-6 text-[#008080]" />,
-    title: "All-in-One Business Solutions",
+    title: "Online CA near me for All-in-One Business Solutions",
     desc: "From ITR to GST to compliance — one digital platform for all your CA and business needs.",
     bullets: [
       "One-stop CA Platform",
@@ -310,8 +332,12 @@ const services = [
       "Secure Online Process",
     ],
     cta: "Get Started with Online CA Services →",
+    priceAmount: "₹1,999/-",
   },
 ];
+
+
+
 
 /* --- DETAILED SERVICES SECTION DATA --- */
 const detailedServices = [
@@ -343,7 +369,7 @@ const detailedServices = [
   },
   {
     icon: "📚",
-    title: "CA for Accounting & Bookkeeping Services",
+    title: "Online CA for Accounting & Bookkeeping Services",
     desc: "Startups, freelancers, and businesses can get their accounting managed efficiently by qualified professionals.",
     points: [
       "Monthly Bookkeeping (Tally / Zoho / QuickBooks).",
@@ -356,7 +382,7 @@ const detailedServices = [
   },
   {
     icon: "🏢",
-    title: "CA for Company Registration & Business Setup",
+    title: "Online CA for Company Registration & Business Setup",
     desc: "Get end-to-end support for business registration, incorporation, and startup advisory from experts.",
     points: [
       "Proprietorship & Partnership Firm Registration.",
@@ -369,7 +395,7 @@ const detailedServices = [
   },
   {
     icon: "⚖️",
-    title: "CA for Business Compliance & Advisory",
+    title: "Online CA for Business Compliance & Advisory",
     desc: "Ensure full compliance with ROC filings, Director KYC, PAN/TAN applications, and legal documentation.",
     points: [
       "ROC Annual Filings (MGT-7, AOC-4).",
@@ -382,7 +408,7 @@ const detailedServices = [
   },
   {
     icon: "🧩",
-    title: "All-in-One Business Solutions",
+    title: "Online CA near me for All-in-One Business Solutions",
     desc: "From tax filing to business registration, get everything your business needs under one platform.",
     points: [
       "CA for Business Registration, ITR & GST.",

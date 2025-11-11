@@ -57,7 +57,7 @@ export default function PrivacyPolicy() {
                       Service details for appointment booking or subscription.
                     </li>
                     <li>
-                      Transaction data for payment verification (via Razorpay).
+                      Transaction data for payment verification (via our appointed payment gateway partner).
                     </li>
                     <li>
                       Technical data (browser, IP, time logs) for analytics and
@@ -92,7 +92,7 @@ export default function PrivacyPolicy() {
                   </h3>
                   <p className="text-gray-700 leading-relaxed">
                     Information is shared only with professionals or service
-                    providers essential to perform operations (Razorpay,
+                    providers essential to perform operations (our appointed payment gateway partner,
                     hosting, analytics). No personal data is ever sold or
                     disclosed for marketing.
                   </p>
@@ -105,7 +105,7 @@ export default function PrivacyPolicy() {
                   </h3>
                   <p className="text-gray-700 leading-relaxed">
                     All online transactions are securely processed through
-                    Razorpay, which is PCI DSS compliant. Online CA Services
+                    our appointed payment gateway partner, which is PCI DSS compliant. Online CA Services
                     does not store or access your payment card, UPI, or banking
                     details.
                   </p>

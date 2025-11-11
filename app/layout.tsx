@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
 	title:
 		'Online CA Services | CA for ITR Filing, GST Return & Company Registration',
+		icons: {
+    icon: "/favicon.jpeg",
+  },
 	description:
 		'File your ITR, GST, Accounting and Company Registration Online with trusted Chartered Accountants on OnlineCAservices.com - Fast, Secure & Affordable Support across India.',
 }

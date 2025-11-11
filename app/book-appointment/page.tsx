@@ -6,7 +6,7 @@ import Link from "next/link";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
-import { getWhatsAppLink } from "../utils/whatsapp";
+
 
 export default function BookAppointmentPage() {
   const [formData, setFormData] = useState({
@@ -32,27 +32,100 @@ export default function BookAppointmentPage() {
     <>
       <Header />
       <main className="bg-gray-50 pt-28 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-2xl p-8 sm:p-12">
-          {/* Heading */}
-          <h1 className="text-3xl sm:text-4xl font-bold text-center text-teal-700 mb-6">
-            📞 Book On-Call Appointment with a CA
-          </h1>
-          <p className="text-gray-700 text-center mb-10 leading-relaxed">
-            💼 Connect instantly with a verified Online CA for Income Tax, GST,
-            Accounting & Business Compliance. Book a one-on-one voice call or
-            Zoom/Google Meet session directly with a trusted Chartered
-            Accountant.
-          </p>
+        {/* Heading */}
+        <h1 className="text-3xl sm:text-4xl font-bold text-center bg-linear-to-r from-blue-600 via-teal-400 to-gray-900 bg-clip-text text-transparent mb-6">
+          Book On-Call Appointment with a CA
+        </h1>
+        <p className="text-gray-700 text-center mb-10 leading-relaxed">
+          Connect instantly with a verified Online CA for Income Tax, GST,
+          Accounting & Business Compliance. Book a one-on-one voice call or
+          Zoom/Google Meet session directly with a trusted Chartered Accountant.
+        </p>
 
-          {/* Booking Form */}
-          <section className="bg-gray-50 py-16 px-6">
-            <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl p-8 md:p-10">
-              <h2 className="text-2xl font-semibold text-teal-700 mb-6 text-center">
+        <div className="max-w-7xl mx-auto bg-white shadow-lg rounded-2xl p-6 sm:p-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+            {/* left - Info Section */}
+            <div className="text-gray-700  space-y-8">
+              {/* Section Heading */}
+              <h2 className="text-2xl sm:text-3xl font-bold bg-linear-to-r from-blue-600 via-teal-400 to-gray-900 bg-clip-text text-transparent text-center mb-6">
+                Service Information
+              </h2>
+              {/* Consultation Details */}
+              <div className="border-t-2 border-gray-200 shadow-md p-2.5 ">
+                <h3 className="text-lg font-semibold text-teal-700  mb-2">
+                  💰 Consultation Details
+                </h3>
+                <ul className="list-disc pl-5 space-y-1 text-sm sm:text-base">
+                  <li>Duration: 30 minutes</li>
+                  <li>Consultation Fee: ₹499 only</li>
+                  <li>
+                    Services Covered: ITR, GST, business registration &
+                    compliance.
+                  </li>
+                  <li>Availability: Monday to Sunday, 9:00 AM – 9:00 PM</li>
+                </ul>
+              </div>
+
+              {/* How It Works */}
+              <div className="border-t-2 border-gray-200 shadow-md p-2.5 ">
+                <h3 className="text-lg font-semibold text-teal-700 mb-2">
+                  ⚙️ How It Works
+                </h3>
+                <ol className="list-decimal pl-5 space-y-1 text-sm sm:text-base">
+                  <li>Fill out the booking form and select your service.</li>
+                  <li>
+                    Make a secure online payment to confirm your consultation.
+                  </li>
+                  <li>
+                    Connect directly with your CA through WhatsApp or email.
+                  </li>
+                </ol>
+              </div>
+
+              {/* Why Choose */}
+              <div className="border-t-2 border-gray-200 shadow-md p-2.5 ">
+                <h3 className="text-lg font-semibold text-teal-700 mb-2">
+                  💬 Why Choose Online CA Services
+                </h3>
+                <ul className="list-disc pl-5 space-y-1 text-sm sm:text-base">
+                  <li>Verified Chartered Accountants</li>
+                  <li>Expert for Income Tax, GST & Business Registration</li>
+                  <li>Instant booking confirmation & follow-up</li>
+                  <li>Secure and confidential service</li>
+                </ul>
+              </div>
+
+              {/* Disclaimer */}
+              <div className="border-t-2 border-gray-200 shadow-md p-2.5 ">
+                <h3 className="text-lg font-semibold text-teal-700 mb-2">
+                  ⚠️ Disclaimer
+                </h3>
+                <p className="leading-relaxed text-sm sm:text-base">
+                  Online CA Services is an independent platform connecting
+                  clients with verified professionals. It is not a CA firm and
+                  not affiliated with ICAI or any government body.
+                </p>
+              </div>
+
+              {/* Final CTA */}
+              <div className="text-center mt-8">
+                <Link
+                  href=""
+                  target="_blank"
+                  className="inline-block bg-teal-600 text-white font-semibold py-3 px-6 rounded-lg text-base hover:bg-teal-700 transition-all duration-200 shadow-md hover:shadow-lg"
+                >
+                  📞 Book My CA Consultation Now ➡️
+                </Link>
+              </div>
+            </div>
+            {/* right - Booking Form */}
+            <section className="bg-gray-50 rounded-2xl shadow-xl p-6 sm:p-8">
+              <h2 className="text-2xl font-semibold bg-linear-to-r from-blue-600 via-teal-400 to-gray-900 bg-clip-text text-transparent mb-6 text-center">
                 Appointment Form
               </h2>
 
               <form onSubmit={handleSubmit} className="space-y-5">
-                {/* Name */}
+                {/* Full Name */}
                 <div>
                   <label className="block text-gray-700 font-medium mb-2">
                     Full Name
@@ -69,7 +142,7 @@ export default function BookAppointmentPage() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full pl-10 pr-4 py-3 rounded-lg bg-gray-100 focus:bg-white focus:ring-2 focus:ring-teal-600 outline-none transition-all"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-lg bg-gray-100 text-gray-700 focus:bg-white focus:ring-2 focus:ring-teal-600 outline-none transition-all"
                     />
                   </div>
                 </div>
@@ -91,7 +164,7 @@ export default function BookAppointmentPage() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full pl-10 pr-4 py-3 rounded-lg bg-gray-100 focus:bg-white focus:ring-2 focus:ring-teal-600 outline-none transition-all"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-lg bg-gray-100 text-gray-700 focus:bg-white focus:ring-2 focus:ring-teal-600 outline-none transition-all"
                     />
                   </div>
                 </div>
@@ -113,7 +186,7 @@ export default function BookAppointmentPage() {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="w-full pl-10 pr-4 py-3 rounded-lg bg-gray-100 focus:bg-white focus:ring-2 focus:ring-teal-600 outline-none transition-all"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-lg bg-gray-100 text-gray-700 focus:bg-white focus:ring-2 focus:ring-teal-600 outline-none transition-all"
                     />
                   </div>
                 </div>
@@ -134,7 +207,7 @@ export default function BookAppointmentPage() {
                       value={formData.date}
                       onChange={handleChange}
                       required
-                      className="w-full pl-10 pr-4 py-3 rounded-lg bg-gray-100 focus:bg-white focus:ring-2 focus:ring-teal-600 outline-none transition-all"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-lg text-gray-700 bg-gray-100 focus:bg-white focus:ring-2 focus:ring-teal-600 outline-none transition-all"
                     />
                   </div>
                 </div>
@@ -149,8 +222,8 @@ export default function BookAppointmentPage() {
                     placeholder="Describe your requirements..."
                     value={formData.message}
                     onChange={handleChange}
-                    rows={4}
-                    className="w-full px-4 py-3 rounded-lg bg-gray-100 focus:bg-white focus:ring-2 focus:ring-teal-600 outline-none transition-all resize-none"
+                    rows={3}
+                    className="w-full px-4 py-2.5 rounded-lg bg-gray-100 text-gray-700 focus:bg-white focus:ring-2 focus:ring-teal-600 outline-none transition-all resize-none"
                   ></textarea>
                 </div>
 
@@ -159,94 +232,14 @@ export default function BookAppointmentPage() {
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
                   type="submit"
-                  className="w-full bg-teal-600 text-white py-3.5 rounded-lg text-base font-semibold hover:bg-teal-700 transition-all duration-200 shadow-md hover:shadow-lg"
+                  className="w-full bg-teal-600 text-white py-3 rounded-lg text-base font-semibold hover:bg-teal-700 transition-all duration-200 shadow-md hover:shadow-lg"
                 >
-                  Submit Appointment Request
+                  Pay & Book my Call
                 </motion.button>
               </form>
 
-              {/* WhatsApp Quick Connect */}
-              <div className="text-center mt-6">
-                <Link
-                  href={getWhatsAppLink()}
-                  target="_blank"
-                  className="inline-flex items-center gap-2 text-teal-700 font-medium hover:text-teal-800 transition-all"
-                >
-                  <MessageCircle size={20} />
-                  Chat on WhatsApp
-                </Link>
-              </div>
-            </div>
-          </section>
-
-          {/* Info Sections */}
-          <div className="mt-12 space-y-10 text-gray-700">
-            <div>
-              <h3 className="text-lg font-semibold text-teal-700 mb-2">
-                💰 Consultation Details
-              </h3>
-              <ul className="list-disc pl-6 space-y-1">
-                <li>Duration: 30 minutes</li>
-                <li>Consultation Fee: ₹499 only</li>
-                <li>
-                  Services Covered: Expert advice for ITR, GST, business
-                  registration & compliance.
-                </li>
-                <li>Availability: Monday to Sunday, 9:00 AM – 9:00 PM</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-teal-700 mb-2">
-                ⚙️ How It Works
-              </h3>
-              <ol className="list-decimal pl-6 space-y-1">
-                <li>Fill out the booking form and select your service.</li>
-                <li>
-                  Make a secure online payment to confirm your consultation.
-                </li>
-                <li>
-                  Connect directly with your CA through WhatsApp or email.
-                </li>
-              </ol>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-teal-700 mb-2">
-                💬 Why Choose Online CA Services
-              </h3>
-              <ul className="list-disc pl-6 space-y-1">
-                <li>Connect directly with verified Chartered Accountants</li>
-                <li>
-                  Expert consultation for Income Tax, GST & Business
-                  Registration
-                </li>
-                <li>Instant booking confirmation & professional follow-up</li>
-                <li>Secure, confidential, and efficient service</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-teal-700 mb-2">
-                ⚠️ Disclaimer
-              </h3>
-              <p className="leading-relaxed">
-                Online CA Services is an independent platform connecting clients
-                with verified professionals. It is not a CA firm and is not
-                affiliated with ICAI or any government body.
-              </p>
-            </div>
-          </div>
-
-          {/* Final CTA */}
-          <div className="text-center mt-12">
-            <Link
-              href="https://payments.cashfree.com/forms/Book-ca-call"
-              target="_blank"
-              className="inline-block bg-teal-600 text-white font-semibold py-3 px-8 rounded-lg text-lg hover:bg-teal-700 transition-all duration-200 shadow-md hover:shadow-lg"
-            >
-              📞 Book My CA Consultation Now ➡️
-            </Link>
+             
+            </section>
           </div>
         </div>
       </main>

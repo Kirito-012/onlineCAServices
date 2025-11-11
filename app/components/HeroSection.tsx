@@ -106,7 +106,7 @@ export default function HeroSection() {
               Chat on WhatsApp
             </a>
             <a
-              href="https://pages.razorpay.com/pl_Rcj2d8gbjeRmXZ/view"
+              href="https://payments.cashfree.com/forms/Book-ca-call"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block cursor-pointer bg-white text-teal-700 border-2 border-white px-6 py-3 rounded-lg text-sm sm:text-base font-semibold hover:bg-teal-100 hover:scale-105 transition-all duration-200 shadow-lg"
@@ -157,6 +157,7 @@ export default function HeroSection() {
               className="w-full px-3 py-2.5 text-sm sm:text-base rounded-lg text-gray-600 focus:ring-2 focus:ring-teal-600 focus:border-transparent outline-none transition-all"
               defaultValue=""
             >
+              
               <option value="" disabled>
                 Select Service Interested In
               </option>
@@ -175,7 +176,7 @@ export default function HeroSection() {
               type="submit"
               className="w-full bg-teal-600 cursor-pointer hover:bg-teal-700 hover:scale-105 text-white font-semibold py-2.5 text-sm sm:text-base rounded-lg transition-all duration-200 shadow-md hover:shadow-lg mt-4"
             >
-              Get Free Consultation
+              Get First Free Consultation
             </button>
 
             <p className="text-center text-xs text-gray-500 mt-3">

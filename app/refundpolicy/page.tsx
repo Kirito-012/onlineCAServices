@@ -108,7 +108,7 @@ export default function PrivacyPolicy() {
                   <p className="text-gray-700 leading-relaxed">
                     If any transaction fails due to technical error or duplicate
                     payment, the amount will be automatically refunded by
-                    Razorpay to the source account within 7–10 business days.
+                    our appointed payment gateway partner to the source account within 7–10 business days.
                   </p>
                 </div>
 

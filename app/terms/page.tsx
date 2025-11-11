@@ -101,7 +101,7 @@ export default function PrivacyPolicy() {
                     5. Payments & Consultations
                   </h3>
                   <p className="text-gray-700 leading-relaxed">
-                    All payments are collected securely via Razorpay. Once the
+                    All payments are collected securely via our appointed payment gateway partner. Once the
                     user books an appointment or subscription, the payment is
                     final and non-refundable as services are pre-scheduled or
                     listing-based.

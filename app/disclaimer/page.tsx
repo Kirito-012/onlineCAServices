@@ -165,7 +165,7 @@ export default function Disclaimer() {
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
                   The portal may contain links to third-party websites or
-                  payment pages (like Razorpay). Online CA Services does not
+                  payment pages (like our appointed payment gateway partner). Online CA Services does not
                   control or endorse their content, privacy practices, or data
                   handling.
                 </p>
