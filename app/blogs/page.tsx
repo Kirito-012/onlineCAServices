@@ -16,7 +16,7 @@ export default function Blogs() {
           {/* Background Image */}
           <div className="absolute inset-0">
             <img
-              src="/b2.jpeg"
+              src="/b1.png"
               alt="Background"
               className="w-full h-full object-cover"
             />
