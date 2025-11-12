@@ -41,56 +41,47 @@ export default function CallToAction() {
           {/* Contact Info Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 text-center">
             {/* ✅ Call Us */}
-            <motion.div
+            <motion.a
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
-              className="bg-linear-to-br from-teal-200 via-white to-blue-200 shadow-lg rounded-2xl p-6 border border-teal-100 flex flex-col items-center justify-center transition-all hover:shadow-xl hover:from-teal-100 hover:to-blue-100"
+              href="tel:+918595236343"
+              className="bg-sky-400 shadow-lg rounded-2xl p-6 border border-teal-100 flex flex-col items-center justify-center transition-all hover:shadow-xl hover:from-teal-100 hover:to-blue-100 cursor-pointer"
               style={{ willChange: "transform" }}
             >
-              <PhoneCall className="text-teal-600 w-8 h-8 mb-3" />
-              <p className="font-semibold text-gray-800">Call Us</p>
-              <a
-                href="tel:+918595236343"
-                className="text-sm text-teal-700 hover:underline mt-1"
-              >
-                +91-8595236343
-              </a>
-            </motion.div>
+              <PhoneCall className="text-white w-8 h-8 mb-3" />
+              <p className="font-semibold text-slate-100">Call Us</p>
+              <p className="text-sm text-white mt-1">+91-8595236343</p>
+            </motion.a>
 
             {/* ✅ Email Us */}
-            <motion.div
+            <motion.a
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
-              className="bg-linear-to-br from-blue-200 via-white to-teal-200 shadow-lg rounded-2xl p-6 border border-teal-100 flex flex-col items-center justify-center transition-all hover:shadow-xl hover:from-blue-100 hover:to-teal-100"
+              href="mailto:myonlinecaservices@gmail.com"
+              className="bg-white shadow-lg rounded-2xl p-6 border border-teal-100 flex flex-col items-center justify-center transition-all hover:shadow-xl hover:from-blue-100 hover:to-teal-100 cursor-pointer"
               style={{ willChange: "transform" }}
             >
               <Mail className="text-teal-600 w-8 h-8 mb-3" />
               <p className="font-semibold text-gray-800">Email Us</p>
-              <a
-                href="mailto:myonlinecaservices@gmail.com"
-                className="text-sm text-teal-700 hover:underline mt-1"
-              >
+              <p className="text-sm text-teal-700 mt-1">
                 myonlinecaservices@gmail.com
-              </a>
-            </motion.div>
+              </p>
+            </motion.a>
 
             {/* ✅ WhatsApp */}
-            <motion.div
+            <motion.a
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
-              className="bg-linear-to-br from-teal-200 via-white to-blue-200 shadow-lg rounded-2xl p-6 border border-teal-100 flex flex-col items-center justify-center transition-all hover:shadow-xl hover:from-teal-100 hover:to-blue-100"
+              href={getWhatsAppLink()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-500 shadow-lg rounded-2xl p-6 border border-teal-100 flex flex-col items-center justify-center transition-all hover:shadow-xl hover:from-teal-100 hover:to-blue-100 cursor-pointer"
               style={{ willChange: "transform" }}
             >
-              <MessageCircle className="text-teal-600 w-8 h-8 mb-3" />
-              <p className="font-semibold text-gray-800">WhatsApp</p>
-              <Link
-                href={getWhatsAppLink()}
-                target="_blank"
-                className="text-sm text-teal-700 hover:underline mt-1"
-              >
-                +91-8595236343
-              </Link>
-            </motion.div>
+              <MessageCircle className="text-white w-8 h-8 mb-3" />
+              <p className="font-semibold text-white">WhatsApp</p>
+              <p className="text-sm text-white mt-1">+91-8595236343</p>
+            </motion.a>
           </div>
 
           {/* CTA Button */}

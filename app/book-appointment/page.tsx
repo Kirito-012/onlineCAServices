@@ -108,7 +108,7 @@ export default function BookAppointmentPage() {
               </div>
 
               {/* Final CTA */}
-              <div className="text-center mt-8">
+              {/* <div className="text-center mt-8">
                 <Link
                   href=""
                   target="_blank"
@@ -116,7 +116,7 @@ export default function BookAppointmentPage() {
                 >
                   📞 Book My CA Consultation Now ➡️
                 </Link>
-              </div>
+              </div> */}
             </div>
             {/* right - Booking Form */}
             <section className="bg-gray-50 rounded-2xl shadow-xl p-6 sm:p-8">

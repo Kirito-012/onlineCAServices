@@ -270,7 +270,7 @@ const services = [
       "Tax Planning & Advisory",
     ],
     cta: "File My ITR Online →",
-    priceAmount: "₹499/-",
+    priceAmount: "₹499* Onwards",
   },
   {
     icon: <ClipboardCheck className="w-6 h-6 text-[#008080]" />,
@@ -283,7 +283,7 @@ const services = [
       "ITC Reconciliation",
     ],
     cta: "Connect with a GST Expert →",
-    priceAmount: "₹999/-",
+    priceAmount: "₹999* Onwards",
   },
   {
     icon: <Users className="w-6 h-6 text-[#008080]" />,
@@ -296,7 +296,7 @@ const services = [
       "Virtual CFO Support",
     ],
     cta: "Get My Accounts Managed →",
-    priceAmount: "₹499/-",
+    priceAmount: "₹499* Onwards",
   },
   {
     icon: <Building2 className="w-6 h-6 text-[#008080]" />,
@@ -308,7 +308,7 @@ const services = [
       "Shop & Establishment License",
     ],
     cta: "Register My Business →",
-    priceAmount: "₹999/-",
+    priceAmount: "₹999* Onwards",
   },
   {
     icon: <ShieldCheck className="w-6 h-6 text-[#008080]" />,
@@ -320,7 +320,7 @@ const services = [
       "Audit & Due Diligence Reports",
     ],
     cta: "Ensure My Business Compliance →",
-    priceAmount: "₹1,999/-",
+    priceAmount: "₹1,999* Onwards",
   },
   {
     icon: <Briefcase className="w-6 h-6 text-[#008080]" />,
@@ -332,7 +332,7 @@ const services = [
       "Secure Online Process",
     ],
     cta: "Get Started with Online CA Services →",
-    priceAmount: "₹1,999/-",
+    priceAmount: "₹1,999* Onwards",
   },
 ];
 

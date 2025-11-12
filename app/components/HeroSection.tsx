@@ -106,9 +106,7 @@ export default function HeroSection() {
               Chat on WhatsApp
             </a>
             <a
-              href="https://payments.cashfree.com/forms/Book-ca-call"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/book-appointment"
               className="inline-block cursor-pointer bg-white text-teal-700 border-2 border-white px-6 py-3 rounded-lg text-sm sm:text-base font-semibold hover:bg-teal-100 hover:scale-105 transition-all duration-200 shadow-lg"
             >
               Book CA Consultation →
@@ -157,7 +155,6 @@ export default function HeroSection() {
               className="w-full px-3 py-2.5 text-sm sm:text-base rounded-lg text-gray-600 focus:ring-2 focus:ring-teal-600 focus:border-transparent outline-none transition-all"
               defaultValue=""
             >
-              
               <option value="" disabled>
                 Select Service Interested In
               </option>
