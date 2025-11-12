@@ -18,7 +18,7 @@ export default function ServicesPage() {
     <>
       <Header />
 
-      <main className="bg-gray-50 text-gray-900">
+      <main className="bg-linear-to-br from-gray-100 via-white to-slate-100 text-gray-900">
         {/* HERO SECTION */}
         <section className="relative py-20 md:py-28 h-[60vh] flex items-center justify-center text-center text-white overflow-hidden">
           {/* ✅ Background Image */}
@@ -73,7 +73,7 @@ export default function ServicesPage() {
         {/* GRID OF SERVICE CARDS */}
         <section
           id="all-services"
-          className="max-w-7xl mt-10 mx-auto px-6 pb-16"
+          className="max-w-7xl  mt-10 mx-auto px-6 pb-16"
         >
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -113,7 +113,7 @@ export default function ServicesPage() {
         </section>
 
         {/* 🔹 DETAILED SERVICE INFORMATION SECTION */}
-        <section className="bg-linear-to-br from-blue-200 via-white to-cyan-100 py-20 px-6">
+        <section className=" py-20 px-6">
           <div className="max-w-5xl mx-auto space-y-16">
             {detailedServices.map((service, i) => (
               <motion.div
@@ -212,11 +212,18 @@ type ServiceCardProps = {
   title: string;
   desc: string;
   bullets: string[];
-  cta: string;
+
   priceAmount: string;
 };
 
-function ServiceCard({ icon, title, desc, bullets, cta, priceAmount }: ServiceCardProps) {
+function ServiceCard({
+  icon,
+  title,
+  desc,
+  bullets,
+
+  priceAmount,
+}: ServiceCardProps) {
   return (
     <div className="bg-white rounded-2xl p-6 shadow hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between h-full">
       <div>
@@ -240,19 +247,13 @@ function ServiceCard({ icon, title, desc, bullets, cta, priceAmount }: ServiceCa
         {/* Pricing */}
         <div className="mt-4 text-sm">
           <span className="text-xl font-semibold text-gray-800">Pricing: </span>
-          <span className="text-[#008080] font-bold text-base">{priceAmount}</span>
+          <span className="text-[#008080] font-bold text-base">
+            {priceAmount}
+          </span>
         </div>
       </div>
 
       {/* CTA */}
-      <div className="mt-6">
-        <a
-          href="/contact"
-          className="inline-block text-[#0B3D91] font-semibold hover:underline"
-        >
-          {cta}
-        </a>
-      </div>
     </div>
   );
 }
@@ -269,7 +270,7 @@ const services = [
       "Revised / Rectified Returns",
       "Tax Planning & Advisory",
     ],
-    cta: "File My ITR Online →",
+
     priceAmount: "₹499* Onwards",
   },
   {
@@ -282,7 +283,7 @@ const services = [
       "GST Notices & Replies",
       "ITC Reconciliation",
     ],
-    cta: "Connect with a GST Expert →",
+
     priceAmount: "₹999* Onwards",
   },
   {
@@ -295,7 +296,7 @@ const services = [
       "MIS & Financial Reports",
       "Virtual CFO Support",
     ],
-    cta: "Get My Accounts Managed →",
+
     priceAmount: "₹499* Onwards",
   },
   {
@@ -307,7 +308,7 @@ const services = [
       "Startup India, MSME & UDYAM",
       "Shop & Establishment License",
     ],
-    cta: "Register My Business →",
+
     priceAmount: "₹999* Onwards",
   },
   {
@@ -319,7 +320,7 @@ const services = [
       "Director KYC & Legal Drafting",
       "Audit & Due Diligence Reports",
     ],
-    cta: "Ensure My Business Compliance →",
+
     priceAmount: "₹1,999* Onwards",
   },
   {
@@ -331,13 +332,10 @@ const services = [
       "Verified Professionals",
       "Secure Online Process",
     ],
-    cta: "Get Started with Online CA Services →",
+
     priceAmount: "₹1,999* Onwards",
   },
 ];
-
-
-
 
 /* --- DETAILED SERVICES SECTION DATA --- */
 const detailedServices = [
