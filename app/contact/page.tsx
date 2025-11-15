@@ -1,39 +1,85 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone, Facebook, Instagram } from "lucide-react";
-import Link from "next/link";
+import { Mail, MapPin, Phone, Instagram } from "lucide-react";
+import { useState } from "react";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (res.ok && data.success) {
+        alert("Your message has been sent. We will contact you soon!");
+
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          message: "",
+        });
+      } else {
+        alert("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("CONTACT FORM ERROR:", error);
+      alert("Something went wrong. Please try again.");
+    }
+  };
+
   return (
     <>
       <Header />
       <main className="bg-gray-50 text-gray-800 overflow-hidden">
-        {/* ✅ Hero Section */}
+        {/* HERO SECTION */}
         <section className="relative py-20 md:py-28 h-[60vh] flex items-center justify-center text-center text-white">
-          {/* Background Image */}
           <div className="absolute inset-0">
             <img
               src="/hero2.jpeg"
               alt="Background"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/50"></div>
+            <div className="absolute inset-0 bg-black/50" />
           </div>
 
-          {/* Content */}
           <div className="relative z-10 container mx-auto px-4">
             <motion.h1
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-3xl pt-12 sm:text-4xl md:text-5xl font-extrabold leading-tight"
+              className="text-3xl pt-12 sm:text-4xl md:text-5xl font-extrabold"
             >
               Contact Us
             </motion.h1>
+
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -46,9 +92,9 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* ✅ Contact Info + Form */}
+        {/* INFO + FORM */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-10">
-          {/* LEFT - CONTACT INFO */}
+          {/* LEFT SIDE */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -97,14 +143,13 @@ export default function ContactPage() {
               ))}
             </div>
 
-            {/* Social Media */}
+            {/* SOCIALS */}
             <div className="text-center pt-10">
               <h3 className="font-medium text-lg mb-3">Follow Us</h3>
               <div className="flex justify-center space-x-4">
                 <a
                   href="https://www.instagram.com/onlinecaservices"
                   target="_blank"
-                  rel="noopener noreferrer"
                   className="bg-pink-50 hover:bg-gray-300 p-4 rounded-full transition"
                 >
                   <Instagram className="w-6 h-6 text-[#d3499e]" />
@@ -113,8 +158,9 @@ export default function ContactPage() {
             </div>
           </motion.div>
 
-          {/* RIGHT - CONTACT FORM */}
+          {/* RIGHT FORM */}
           <motion.form
+            onSubmit={handleSubmit}
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -123,31 +169,49 @@ export default function ContactPage() {
             <h2 className="text-2xl sm:text-3xl font-semibold mb-6 border-b-4 border-[#0B3D91] inline-block pb-1">
               Send Us a Message
             </h2>
+
+            {/* NAME + EMAIL */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <input
                 type="text"
+                name="name"
                 placeholder="Full Name *"
-                className="p-3 border rounded-md w-full focus:ring-2 focus:ring-[#008080] outline-none"
                 required
+                value={formData.name}
+                onChange={handleChange}
+                className="p-3 border rounded-md w-full focus:ring-2 focus:ring-[#008080] outline-none"
               />
+
               <input
                 type="email"
+                name="email"
                 placeholder="Email Address *"
-                className="p-3 border rounded-md w-full focus:ring-2 focus:ring-[#008080] outline-none"
                 required
+                value={formData.email}
+                onChange={handleChange}
+                className="p-3 border rounded-md w-full focus:ring-2 focus:ring-[#008080] outline-none"
               />
             </div>
+
+            {/* PHONE */}
             <div className="mt-5">
               <input
                 type="tel"
+                name="phone"
                 placeholder="Mobile Number (WhatsApp)"
+                value={formData.phone}
+                onChange={handleChange}
                 className="p-3 border rounded-md w-full focus:ring-2 focus:ring-[#008080] outline-none"
               />
             </div>
+
+            {/* SERVICE DROPDOWN */}
             <div className="mt-5">
               <select
-                className="w-full px-3 py-2.5 text-sm sm:text-base rounded-lg text-gray-600 focus:ring-2 focus:ring-teal-600 focus:border-transparent outline-none transition-all"
-                defaultValue=""
+                name="service"
+                value={formData.service}
+                onChange={handleChange}
+                className="w-full px-3 py-2.5 rounded-lg text-gray-600 focus:ring-2 focus:ring-teal-600 outline-none transition-all"
               >
                 <option value="" disabled>
                   Select Service Interested In
@@ -163,13 +227,20 @@ export default function ContactPage() {
                 <option value="other-products">Other Products</option>
               </select>
             </div>
+
+            {/* MESSAGE */}
             <div className="mt-5">
               <textarea
+                name="message"
                 rows={4}
                 placeholder="Message / Query (Optional)"
+                value={formData.message}
+                onChange={handleChange}
                 className="p-3 border rounded-md w-full focus:ring-2 focus:ring-[#008080] outline-none"
               />
             </div>
+
+            {/* BUTTON */}
             <button
               type="submit"
               className="mt-6 w-full bg-[#008080] text-white py-3 rounded-lg font-semibold hover:bg-[#0B3D91] transition duration-300"
@@ -179,45 +250,23 @@ export default function ContactPage() {
           </motion.form>
         </section>
 
-        {/* ✅ Map Section */}
-        {/* <section className="py-20 bg-gray-50 text-center px-4">
-          <h3 className="text-gray-600 uppercase tracking-wider">Find Us</h3>
-          <h2 className="text-3xl font-bold text-gray-900 border-b-4 border-teal-600 inline-block mb-10">
-            Visit Our Office
-          </h2>
-          <div className="max-w-6xl mx-auto rounded-2xl overflow-hidden shadow-lg">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.5907226877124!2d80.9405802754179!3d26.84968747668485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be2c7e3b734b5%3A0x3a56ec4bb22674f9!2sDelhi%2C%20India!5e0!3m2!1sen!2sin!4v1691088993857!5m2!1sen!2sin"
-              width="100%"
-              height="400"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-            ></iframe>
-          </div>
-        </section> */}
-
-        {/* ✅ Office Hours */}
+        {/* OFFICE HOURS */}
         <section className="py-16 text-center bg-gray-50 px-4">
-          {/* <h3 className="text-gray-600 uppercase tracking-wider">When to Visit</h3> */}
           <h2 className="text-3xl font-bold text-gray-900 border-b-4 border-teal-600 inline-block mb-10">
             Office Hours
           </h2>
-          <div className=" max-w-2xl mx-auto">
+
+          <div className="max-w-2xl mx-auto">
             <div className="bg-gray-200 p-8 rounded-xl">
               <h4 className="font-semibold text-lg">Work Timing</h4>
               <p className="text-gray-600 mt-2">
                 Monday – Sunday: 9:00 AM – 9:00 PM
               </p>
             </div>
-            {/* <div className="bg-gray-200 p-8 rounded-xl">
-              <h4 className="font-semibold text-lg">Weekends</h4>
-              <p className="text-gray-600 mt-2">Saturday: 10:00 AM – 2:00 PM</p>
-              <p className="text-gray-600">Sunday: Closed</p>
-            </div> */}
           </div>
         </section>
-        {/* Website Management Section */}
+
+        {/* FOOTER BRAND */}
         <section className="bg-gray-50 py-10 border-t border-gray-200">
           <div className="max-w-6xl mx-auto px-4 text-center">
             <p className="text-sm md:text-base text-gray-700 font-medium">
@@ -232,11 +281,12 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* ✅ Why Choose Section */}
+        {/* WHY CHOOSE SECTION */}
         <section className="bg-linear-to-br from-teal-200 via-white to-blue-200 text-gray-700 py-16 px-6 text-center">
           <h2 className="text-3xl font-semibold mb-6">
             Why Choose Online CA Services?
           </h2>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {[
               "Connect with professionals instantly — no waiting",

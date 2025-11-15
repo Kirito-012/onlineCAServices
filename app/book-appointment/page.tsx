@@ -23,10 +23,38 @@ export default function BookAppointmentPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    alert("Appointment request submitted successfully!");
-  };
+ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  try {
+    const res = await fetch("/api/appointment", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+
+    if (res.ok && data.success) {
+      alert("Your appointment request has been sent to CA!");
+      // form reset
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        date: "",
+        message: "",
+      });
+    } else {
+      alert("Failed to send request. Please try again.");
+    }
+  } catch (err) {
+    console.error(err);
+    alert("Something went wrong. Please try again.");
+  }
+};
+
+
 
   return (
     <>
