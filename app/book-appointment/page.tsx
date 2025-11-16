@@ -143,7 +143,7 @@ export default function BookAppointment() {
           </div>
         </div>
         {/* WHY CHOOSE SECTION */}
-        <section className="bg-linear-to-br mt-10 from-teal-200 via-white to-blue-200 text-gray-700 py-16 px-6 text-center">
+        <section className="bg-linear-to-br mt-12 from-teal-200 via-white to-blue-200 text-gray-700 py-16 px-6 text-center">
           <h2 className="text-3xl font-semibold mb-6">
             Why Choose Online CA Services?
           </h2>
