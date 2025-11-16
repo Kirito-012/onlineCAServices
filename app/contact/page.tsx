@@ -266,20 +266,7 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* FOOTER BRAND */}
-        <section className="bg-gray-50 py-10 border-t border-gray-200">
-          <div className="max-w-6xl mx-auto px-4 text-center">
-            <p className="text-sm md:text-base text-gray-700 font-medium">
-              Website Managed by{" "}
-              <span className="font-semibold text-[#0B3D91]">
-                Manish Bhatnagar
-              </span>
-            </p>
-            <p className="text-sm text-gray-600 mt-1">
-              410, Near Yadav Chopal, Kapashera, New Delhi - 110037
-            </p>
-          </div>
-        </section>
+        
 
         {/* WHY CHOOSE SECTION */}
         <section className="bg-linear-to-br from-teal-200 via-white to-blue-200 text-gray-700 py-16 px-6 text-center">

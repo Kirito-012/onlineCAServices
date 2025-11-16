@@ -111,9 +111,17 @@ export default function ServicesPage() {
             ))}
           </div>
         </section>
+        <section className="bg-gray-50 py-10 border-t border-gray-200">
+          <div className="max-w-6xl mx-auto px-4 text-center">
+            <p className="text-sm md:text-base text-gray-700 font-medium">
+              *Fees will be confirmed after a comprehensive case review in consultation with a qualified and experienced Chartered Accountant. The final charges may vary based on the scope, complexity, and volume of work involved. Once the fee is agreed upon with the CA, you may proceed to pay it by clicking on the ‘Pay Fees’ button.
+            </p>
+            
+          </div>
+        </section>
 
         {/* 🔹 DETAILED SERVICE INFORMATION SECTION */}
-        <section className=" py-20 px-6">
+        <section className=" py-20 mt-1 px-6">
           <div className="max-w-5xl mx-auto space-y-16">
             {detailedServices.map((service, i) => (
               <motion.div
@@ -253,7 +261,38 @@ function ServiceCard({
         </div>
       </div>
 
-      {/* CTA */}
+      {/* CTA Button — Centered */}
+      <Link
+        href="https://pages.razorpay.com/professional-fees"
+        className="
+      bg-teal-600 
+      text-white 
+      px-5
+      py-2 
+      rounded-lg 
+      text-sm 
+      font-semibold 
+      flex 
+      items-center 
+      justify-center 
+      shadow-sm 
+      transition-all 
+      duration-300 
+      hover:bg-white
+      hover:text-gray-900
+
+      hover:border-2
+      hover:border-teal-200
+      hover:shadow-md 
+      hover:scale-105
+      active:scale-95
+      w-full
+      mx-auto          /* ⬅ Centers the button */
+      mt-6
+    "
+      >
+        Pay   Fees
+      </Link>
     </div>
   );
 }
@@ -297,7 +336,7 @@ const services = [
       "Virtual CFO Support",
     ],
 
-    priceAmount: "₹499* Onwards",
+    priceAmount: "₹999* Onwards",
   },
   {
     icon: <Building2 className="w-6 h-6 text-[#008080]" />,
@@ -309,7 +348,7 @@ const services = [
       "Shop & Establishment License",
     ],
 
-    priceAmount: "₹999* Onwards",
+    priceAmount: "₹1999* Onwards",
   },
   {
     icon: <ShieldCheck className="w-6 h-6 text-[#008080]" />,
