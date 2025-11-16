@@ -52,19 +52,30 @@ export default function BookAppointment() {
                   Consultation Details
                 </h3>
                 <ul className="list-disc pl-5 space-y-3 text-sm sm:text-base">
-                  <li>Duration: 30 minutes (extendable as per requirement)</li>
                   <li>
-                    Consultation Fee: Very Nominal as mentioned in the form.
+                    {" "}
+                    <b>Duration:</b> 30 minutes (extendable as per requirement)
                   </li>
                   <li>
-                    Additional Benefit: One complimentary follow-up session
+                    <b>Consultation Fee</b> Consultation Fee: Very Nominal as
+                    mentioned in the form.
                   </li>
                   <li>
-                    Services Covered: Income Tax, GST, business registration,
-                    personal finance tax planning, accounting, Other Services.
+                    <b>Additional Benefit:</b> Additional Benefit: One
+                    complimentary follow-up session
                   </li>
-                  <li>Availability: Monday to Sunday, 9:00 AM – 9:00 PM</li>
-                  <li>Modes Available: Phone Call, Zoom, or Google Meet</li>
+                  <li>
+                    <b> Services Covered:</b> Income Tax, GST, business
+                    registration, personal finance tax planning, accounting,
+                    Other Services.
+                  </li>
+                  <li>
+                    <b>Availability:</b> Monday to Sunday, 9:00 AM – 9:00 PM
+                  </li>
+                  <li>
+                    {" "}
+                    <b>Modes Available:</b> Phone Call, Zoom, or Google Meet
+                  </li>
                 </ul>
               </div>
 
@@ -132,7 +143,7 @@ export default function BookAppointment() {
           </div>
         </div>
         {/* WHY CHOOSE SECTION */}
-        <section className="bg-linear-to-br from-teal-200 via-white to-blue-200 text-gray-700 py-16 px-6 text-center">
+        <section className="bg-linear-to-br mt-10 from-teal-200 via-white to-blue-200 text-gray-700 py-16 px-6 text-center">
           <h2 className="text-3xl font-semibold mb-6">
             Why Choose Online CA Services?
           </h2>
