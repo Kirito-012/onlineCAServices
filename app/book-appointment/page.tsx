@@ -57,11 +57,11 @@ export default function BookAppointment() {
                     <b>Duration:</b> 30 minutes (extendable as per requirement)
                   </li>
                   <li>
-                    <b>Consultation Fee</b> Consultation Fee: Very Nominal as
+                    <b>Consultation Fee</b> Very Nominal as
                     mentioned in the form.
                   </li>
                   <li>
-                    <b>Additional Benefit:</b> Additional Benefit: One
+                    <b>Additional Benefit:</b> One
                     complimentary follow-up session
                   </li>
                   <li>
