@@ -1,14 +1,21 @@
+export const runtime = "nodejs";
 import nodemailer from "nodemailer";
 
-export async function POST(req: Request) {
+export async function POST(req: { json: () => PromiseLike<{ name: any; phone: any; email: any; service: any; }> | { name: any; phone: any; email: any; service: any; }; }) {
   try {
     const { name, phone, email, service } = await req.json();
 
+    // Gmail SMTP (Correct Setup — Port 587)
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false, // TLS
       auth: {
         user: process.env.GMAIL_USER,
         pass: process.env.GMAIL_PASS,
+      },
+      tls: {
+        rejectUnauthorized: false,
       },
     });
 
@@ -16,13 +23,12 @@ export async function POST(req: Request) {
       from: process.env.GMAIL_USER,
       to: process.env.GMAIL_USER,
       subject: `New Callback Request`,
-      text: `
-New Callback Request:
-
-Name: ${name}
-Phone: ${phone}
-Email: ${email}
-Service Interested: ${service}
+      html: `
+        <h2>New Callback Request</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Service Interested:</strong> ${service}</p>
       `,
     };
 
